@@ -1,0 +1,1 @@
+Source: Puram et al. 2017 Cell, Table S1 (NIHMS950993-supplement-1-6.pdf, page 1). TISCH patient IDs HN25/HN26/HN28 mapped to MEEI25/26/28 (same patient numbers; both carry primary and lymph-node cells as in Table S1). Transcribed 9 Sep 2026.

@@ -1,0 +1,7 @@
+dataset_id	short_name	role	use_for_training	use_for_validation	use_as_outgroup	notes
+HNSC_GSE103322	Puram_HNSC	core_discovery	yes	yes	no	Canonical HNSC pEMT anchor; n=5902 mal=2488 fib+myofib=1454
+OSCC_GSE172577	OSCC	primary_validation	no	yes	no	Disease-matched validation; n=57503 mal=7914 but ZERO fibroblasts; ineligible for training
+LSCC_GSE150321	LSCC	training_support	yes	yes	no	Training partner; n=12687 mal=6172 fib+myofib=451; classifier fib class is Puram-dominated
+NPC_GSE150430	NPC_1	related_validation	no	yes	no	Related-disease validation; n=45959 mal=4586 fib=0; ~90 percent immune cells
+NPC_GSE162025	NPC_2	related_validation	no	yes	no	Related-disease validation; n=176440 mal=2860 fib=0; >98 percent immune; expensive for low signal
+THCA_GSE148673_outgroup	THCA_outgroup	outgroup	no	no	yes	Outgroup; n=19407 mal=7667 fib=683 thyroid stroma; not HNSC

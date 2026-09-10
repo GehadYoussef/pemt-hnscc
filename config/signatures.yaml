@@ -1,0 +1,41 @@
+epithelial:
+- EPCAM
+- CDH1
+- KRT5
+- KRT14
+- KRT17
+- KRT19
+fibroblast_stromal:
+- COL1A1
+- COL1A2
+- DCN
+- LUM
+- FAP
+- ACTA2
+- PDGFRA
+immune:
+- PTPRC
+- CD3D
+- CD3E
+- MS4A1
+- LST1
+- CD68
+endothelial:
+- PECAM1
+- VWF
+- KDR
+- ENG
+hypoxia_canonical:
+- CA9
+- VEGFA
+- SLC2A1
+- EGLN3
+- BNIP3
+- LDHA
+cell_cycle_canonical:
+- MKI67
+- TOP2A
+- PCNA
+- MCM2
+- CCNB1
+- CCNA2

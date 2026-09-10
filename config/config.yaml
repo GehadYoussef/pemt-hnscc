@@ -1,0 +1,146 @@
+project_name: hnscc_pemt_multinomial_pipeline_v4
+random_seed: 42
+
+# Single-cell QC and signature scoring (stage 01)
+single_cell:
+  metadata_file_name: CellMetainfo_table.tsv
+  min_genes_per_cell: 200
+  min_cells_per_gene: 10
+  normalize_target_sum: 10000
+  min_present_signature_genes: 3
+  training_datasets:
+    - HNSC_GSE103322
+    - LSCC_GSE150321
+  validation_datasets:
+    - HNSC_GSE103322
+    - OSCC_GSE172577
+    - LSCC_GSE150321
+    - NPC_GSE150430
+    - NPC_GSE162025
+  outgroup_datasets:
+    - THCA_GSE148673_outgroup
+
+# Training-label generation thresholds (stage 02 step 01)
+training_labels:
+  pemt_high_quantile: 0.75
+  pemt_low_quantile: 0.25
+  epithelial_high_quantile: 0.75
+  hypoxia_exclusion_quantile: 0.90
+  cell_cycle_exclusion_quantile: 0.90
+  fibroblast_strict: true
+
+# Pseudobulk Dirichlet mixtures (stage 02 step 02)
+pseudobulk:
+  n_mixtures_per_dataset: 1000
+  cells_per_mixture: 100
+  min_class_fraction_for_label: 0.60
+  min_cells_per_class: 10
+  min_labelled_cells: 50
+
+# Multinomial elastic-net classifier (stage 02 step 03)
+classifier:
+  solver: saga
+  l1_ratio: 0.5
+  C: 0.1
+  tol: 1.0e-3
+  max_iter: 10000
+  cv_n_splits: 2
+  variance_floor: 1.0e-6
+  min_classifier_genes_in_target: 500
+
+# Single-cell classifier validation (stage 03)
+sc_classifier_validation:
+  fail_if_malignant_pct_fibroblast_above: 30.0
+  fail_if_fibroblast_pct_fibroblast_below: 50.0
+  min_cells_per_pseudobulk: 20
+
+# TCGA paths and preprocessing (stage 04)
+tcga:
+  star_counts_file: data/raw/tcga_hnsc/expression/TCGA-HNSC.star_counts.tsv
+  star_tpm_file: data/raw/tcga_hnsc/expression/TCGA-HNSC.star_tpm.tsv
+  clinical_file: data/raw/tcga_hnsc/clinical/TCGA-HNSC.clinical.tsv
+  survival_file: data/raw/tcga_hnsc/clinical/TCGA-HNSC.survival.tsv
+  log2_tpm_max_check: 100
+  counts_min_log2_value: 1
+  counts_min_sample_frac: 0.2
+
+# DepMap (stage 07 step 01)
+depmap:
+  expression_file: data/raw/depmap/expression/OmicsExpressionProteinCodingGenesTPMLogp1.csv
+  model_file: data/raw/depmap/model_metadata/Model.csv
+
+# Broad PRISM (stage 07 steps 03-05)
+broad_prism:
+  secondary_curve_file: data/raw/prism_broad/secondary_screen/secondary-screen-dose-response-curve-parameters.csv
+  secondary_lfc_file: data/raw/prism_broad/secondary_screen/secondary-screen-replicate-collapsed-logfold-change.csv
+  secondary_treatment_file: data/raw/prism_broad/secondary_screen/secondary-screen-replicate-collapsed-treatment-info.csv
+  secondary_cell_line_file: data/raw/prism_broad/secondary_screen/secondary-screen-cell-line-info.csv
+  corsello_file: data/raw/prism_broad/compound_metadata/Corsello_supplemental_tables.xlsx
+  min_cells_per_drug: 5
+  moa_permutations: 5000
+  moa_permutation_seed: 20260909
+
+# WGCNA (stage 05)
+wgcna:
+  top_variable_genes: 8000
+  soft_power: auto
+  scale_free_r2: 0.80
+  min_module_size: 30
+  merge_cut_height: 0.25
+  TOM_type: signed
+  deep_split: 2
+  primary_trait: pEMT_specificity
+  primary_module: auto
+  seed_min_kME: 0.7
+  trait_columns:
+    - pEMT_specificity
+    - P_pEMT_high
+    - P_epithelial_like
+    - P_fibroblast_stromal_like
+    - pEMT_vs_stroma
+    - pEMT_vs_epithelial
+
+# Reference network databases
+networks:
+  string_links_file: data/raw/networks/9606.protein.links.v11.0.noscores.threshold400.txt   # all-evidence links, used only when string_mode: all
+  string_mode: physical_experimental      # all | physical | physical_experimental (physical subnetwork restricted to edges with experimental or curated-database evidence)
+  string_physical_full_file: data/raw/networks/string/9606.protein.physical.links.full.v11.0.txt.gz
+  string_score_threshold: 400
+  protein_to_gene_file: data/raw/networks/list_protein_to_gene.txt
+  compartment_membrane_file: data/raw/networks/COMPARTMENT_membrane_gene_names.txt
+  compartment_nucleus_file: data/raw/networks/COMPARTMENT_nucleus_gene_names.txt
+  human_interactome_file: data/raw/networks/human_protein_interactome.txt
+  drug_target_file: data/raw/networks/stitch_drugbank_target.v5.1.5_interactions_900_th_400.onlyTarget.Approved.tsv
+  reactome_pathway_file: data/raw/networks/ReactomePathways.gmt
+
+# Network analysis and drug proximity (stage 06)
+network_analysis:
+  permutation_n: 1000
+  proc_count: 8
+  centrality_p_threshold: 0.01
+  permutation_seed: 20260909
+  key_protein_fdr: 0.05
+  key_metrics: [betweenness]   # centralities that define a key protein; eigenvector and pagerank are reported but not used (their degree-preserving null has near-zero variance, so z-scores are inflated)
+  disease_set: seeds            # seeds = the module genes themselves (Guney 2016 design, recommended); key_proteins = betweenness-selected nodes of the STRING shortest-path subnetwork (unstable to the network choice, kept for comparison)
+  proximity_z_threshold: -1.96
+  proximity_min_bin_size: 100
+  proximity_seed: 452456
+  disease_name: HNSCC_pEMT
+  primary_pvalue_columns:
+    - eigen_pvalue
+    - degree_pvalue
+    - between_pvalue
+    - rwr_pvalue
+
+# Output paths
+paths:
+  processed_dir: data/processed
+  references_dir: data/references
+  results_dir: results
+
+# LINCS L1000 signature reversal (stage 06-05)
+lincs:
+  n_signature_genes: 150      # top classifier coefficients per direction
+  result_limit: 2000          # signatures returned per direction by the SigCom enrichment API
+  n_random_controls: 5        # random gene sets of the same size, for MoA specificity
+  control_seed: 20260909

@@ -1,0 +1,19 @@
+designation	tisch_patient_ids	age	sex	primary_site	lymph_nodes_collected	pathologic_stage	N_stage	N_positive	grade	PNI	LVI	ECE
+MEEI5	HNSCC5	69	F	Left lateral tongue	Left level 2	T2N1	N1	1	2	Present	Present	Absent
+MEEI6	HNSCC6	88	F	Right floor of mouth	Left level 2	T4aN2c	N2c	1	1	Present	Present	Present
+MEEI7	HNSCC7	71	F	Right floor of mouth		T1N2b	N2b	1	3	Absent	Present	Present
+MEEI8	HNSCC8	82	F	Right hard palate		T4aN0	N0	0	1	Absent	Absent	
+MEEI9	HNSCC9	77	F	Right lateral tongue		T1N0	N0	0	2	Absent	Absent	
+MEEI10	HNSCC10	76	M	Right retromolar trigone		T4aN2b	N2b	1	2	Absent	Absent	Present
+MEEI12	HNSCC12	80	M	Left retromolar trigone		T4aN0	N0	0	2	Present	Present	
+MEEI13	HNSCC13	52	F	Left lateral tongue		T3N1	N1	1	2	Present	Present	Absent
+MEEI16	HNSCC16	63	F	Left lateral tongue		T2N0	N0	0	1	Absent	Absent	
+MEEI17	HNSCC17	59	M	Right alveolar ridge		T4aN0	N0	0	2	Present	Absent	
+MEEI18	HNSCC18	41	M	Left lateral tongue		T3N1	N1	1	2	Present	Present	Absent
+MEEI20	HNSCC20	53	M	Right floor of mouth	Right level 3	T4aN2c	N2c	1	2	Present	Present	Present
+MEEI22	HNSCC22	77	F	Left buccal mucosa		T1N0	N0	0	2	Absent	Absent	
+MEEI23	HNSCC23	56	M	Right retromolar trigone		T3N1	N1	1	2	Absent	Present	Absent
+MEEI24	HNSCC24	78	F	Right alveolar ridge		T4aN2c	N2c	1	2	Absent	Absent	Absent
+MEEI25	HNSCC25;HN25	76	F	Left lateral tongue	Left level 2	T3N1	N1	1	2	Present	Present	Present
+MEEI26	HNSCC26;HN26	51	M	Left floor of mouth	Right and left level 1	T4aN2c	N2c	1	3	Present	Present	Absent
+MEEI28	HNSCC28;HN28	58	M	Right lateral tongue	Left level 2	T2N2c	N2c	1	1	Present	Present	Absent
