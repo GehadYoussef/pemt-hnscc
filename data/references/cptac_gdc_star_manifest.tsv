@@ -1,0 +1,238 @@
+file_id	file_name	size	case	sample	sample_type	project
+49c738f0-a2d9-457b-94cb-8ca0aadbed15	75f58791-a6d1-4a91-9d62-9b0aa982c24e.rna_seq.augmented_star_gene_counts.tsv	4245422	C3N-04280	C3N-04280-13	Primary Tumor	CPTAC-3
+7310e0e5-db64-48ca-b446-dc99908b138a	8317ba9e-f39a-4783-a541-d318d513b18d.rna_seq.augmented_star_gene_counts.tsv	4149287	C3N-03928	C3N-03928-13	Primary Tumor	CPTAC-3
+91fd6417-23df-4b39-8770-9d44c941121d	ec4209ea-d27e-4cd1-8f92-61908f981576.rna_seq.augmented_star_gene_counts.tsv	4229551	C3N-03928	C3N-03928-03	Primary Tumor	CPTAC-3
+a0610cf4-27a6-4b45-aacc-63bbc79d2a19	f150e4c9-6f6e-4f7a-9e90-248ce34744db.rna_seq.augmented_star_gene_counts.tsv	4217376	C3N-03458	C3N-03458-01	Primary Tumor	CPTAC-3
+060aaf03-5c79-4678-a65c-c7d0cc2098e3	912e2235-a667-44eb-94f1-74b4e560baf3.rna_seq.augmented_star_gene_counts.tsv	4219538	C3N-01643	C3N-01643-04	Primary Tumor	CPTAC-3
+677275c7-a54b-4cf0-ba35-0d3615b5a687	b2f97cd0-3c08-4273-8661-b0ef48f636ea.rna_seq.augmented_star_gene_counts.tsv	4234449	C3N-02333	C3N-02333-06	Solid Tissue Normal	CPTAC-3
+91a65544-bd55-47bd-a6d0-6897f585fe22	70c3d358-35d6-4a03-8861-afe610d7586e.rna_seq.augmented_star_gene_counts.tsv	4223902	C3N-03042	C3N-03042-14	Primary Tumor	CPTAC-3
+20198c90-1fd6-4c3d-84fa-23a4e1a656a2	ad4aabec-216f-447c-9810-2e9dae30b7d9.rna_seq.augmented_star_gene_counts.tsv	4221153	C3N-03042	C3N-03042-04	Primary Tumor	CPTAC-3
+735bdf01-2bd0-4cb4-ada9-808641322a5c	4be3c348-2d0d-439c-ac9f-b72ddb5f63cf.rna_seq.augmented_star_gene_counts.tsv	4206181	C3N-03620	C3N-03620-12	Primary Tumor	CPTAC-3
+f6a47fa3-d78c-4ec9-8c21-6a313daf95cf	43a16e20-5897-4620-ae0d-c06c549ace82.rna_seq.augmented_star_gene_counts.tsv	4227434	C3N-03620	C3N-03620-06	Solid Tissue Normal	CPTAC-3
+a251be5f-dc6e-4649-a50b-9dcbd979b3ba	8f6c3f2a-d3bd-4c2f-9060-0989cc88f62a.rna_seq.augmented_star_gene_counts.tsv	4225984	C3L-00997	C3L-00997-07	Solid Tissue Normal	CPTAC-3
+71256697-2385-4bc1-9cf8-8e1ecb74fa6a	1a2cbbf1-0a31-4b15-aca4-6f6ff491e571.rna_seq.augmented_star_gene_counts.tsv	4228215	C3L-04025	C3L-04025-03	Primary Tumor	CPTAC-3
+38e503ef-5b85-4032-bcc8-9ed7a7414068	6061a7ca-0f75-4b1c-a4db-b4e43a626eb5.rna_seq.augmented_star_gene_counts.tsv	4226151	C3L-02651	C3L-02651-06	Solid Tissue Normal	CPTAC-3
+07a390d0-3307-4a28-837f-07e25a75563e	5c790ebb-b618-4c3b-8b4c-e3b17e343629.rna_seq.augmented_star_gene_counts.tsv	4220184	C3N-03226	C3N-03226-06	Solid Tissue Normal	CPTAC-3
+6eabcbce-d16a-4ca2-8176-4cba530b9ef7	624c6fdb-d67c-41bc-81d9-f22d97f773a7.rna_seq.augmented_star_gene_counts.tsv	4224636	C3N-03226	C3N-03226-12	Primary Tumor	CPTAC-3
+7b12a18a-7127-4d0b-a3ed-0a121cb35bfb	2153967f-65c4-4760-9b9d-892b937a7b4e.rna_seq.augmented_star_gene_counts.tsv	4238963	C3N-02713	C3N-02713-13	Primary Tumor	CPTAC-3
+0a0755f1-fa52-4c84-96bc-5867013db780	7cb7f0b8-d36d-42d5-bf4a-f88aa7fc2bf6.rna_seq.augmented_star_gene_counts.tsv	4245195	C3N-02713	C3N-02713-03	Primary Tumor	CPTAC-3
+22dc1a80-387f-4b3b-b1ff-2cfdd85ea972	49145bae-112a-4932-bed6-b91545ff29c2.rna_seq.augmented_star_gene_counts.tsv	4219137	C3L-00994	C3L-00994-04	Primary Tumor	CPTAC-3
+2ff2c75a-c80b-49a6-8ea4-bb450800a2e9	a1f0fad9-c1ea-40d4-86c7-b11dd79a6e40.rna_seq.augmented_star_gene_counts.tsv	4209984	C3N-04280	C3N-04280-03	Primary Tumor	CPTAC-3
+8efd449a-244d-4d47-97d8-9ce2d941ce97	70c8169f-5a36-4241-8d16-e5945f4fd4db.rna_seq.augmented_star_gene_counts.tsv	4225487	C3N-03928	C3N-03928-06	Solid Tissue Normal	CPTAC-3
+b91ca562-e338-4e1d-9af0-7293a8279e75	3f14cfad-bd48-47b0-998a-03b0c9740925.rna_seq.augmented_star_gene_counts.tsv	4262734	C3N-02333	C3N-02333-12	Primary Tumor	CPTAC-3
+4637d3ef-87c2-4e41-92e2-091f402acd2e	e6ba6398-0e69-4261-9c15-f4807d526554.rna_seq.augmented_star_gene_counts.tsv	4198708	C3N-02333	C3N-02333-12	Primary Tumor	CPTAC-3
+9c498c41-d994-4170-bdb3-cb9e04aba68e	ca13bd6d-09fa-4bfc-a60e-e30486c9bf77.rna_seq.augmented_star_gene_counts.tsv	4227884	C3N-03876	C3N-03876-03	Solid Tissue Normal	CPTAC-3
+4fe9e50e-61d1-43f6-8e00-d22359906662	60c5c209-418b-4ac6-a29d-1d9e8478a2c1.rna_seq.augmented_star_gene_counts.tsv	4237804	C3N-03620	C3N-03620-02	Primary Tumor	CPTAC-3
+018fa954-882d-4e93-b9dc-899c28062e6d	f7ce6f0a-a702-4daf-ba87-d8dd8dd83f36.rna_seq.augmented_star_gene_counts.tsv	4228311	C3L-02651	C3L-02651-04	Primary Tumor	CPTAC-3
+7e7d40a3-1f3d-474c-b94f-f76e6d9d3629	eba78093-281e-4242-8a9c-6375154bbb8a.rna_seq.augmented_star_gene_counts.tsv	4133529	C3L-04849	C3L-04849-12	Primary Tumor	CPTAC-3
+40ae8b2a-1c6a-4a16-abe2-d1e18dce5b79	c889976b-ac2a-4dda-a21c-422722dc59a2.rna_seq.augmented_star_gene_counts.tsv	4179872	C3L-00994	C3L-00994-14	Primary Tumor	CPTAC-3
+d24805cf-4bd5-4876-8435-4f983b73e00f	0c511ffd-edbb-4679-b57e-cd1abd96c081.rna_seq.augmented_star_gene_counts.tsv	4231704	C3N-03457	C3N-03457-02	Primary Tumor	CPTAC-3
+2537565e-664f-4c59-8263-c6cf6268d554	08344e57-0163-468c-9763-548e134ea91a.rna_seq.augmented_star_gene_counts.tsv	4233555	C3N-04275	C3N-04275-04	Primary Tumor	CPTAC-3
+13ac4ea6-3c25-4b47-a53c-0937e964422e	92546e51-b886-496b-bba9-48dcb0a3170f.rna_seq.augmented_star_gene_counts.tsv	4218814	C3N-02333	C3N-02333-02	Primary Tumor	CPTAC-3
+b5b296fe-57a2-49ce-991f-5d7ca33087b3	6438f9b5-7635-487f-b70f-452d44a8a4a6.rna_seq.augmented_star_gene_counts.tsv	4232955	C3N-03837	C3N-03837-03	Solid Tissue Normal	CPTAC-3
+031a3e84-11e6-452f-b593-b1a1534978ce	035d78f3-db08-46a3-a202-1b3bebd1b4f0.rna_seq.augmented_star_gene_counts.tsv	4213666	C3N-03837	C3N-03837-01	Primary Tumor	CPTAC-3
+5a05edab-71f0-44a7-b2c4-beaa4842f7b5	23786d14-710e-4671-bff4-da3cf5af9f73.rna_seq.augmented_star_gene_counts.tsv	4218909	C3L-00997	C3L-00997-14	Primary Tumor	CPTAC-3
+37a962a1-2040-46e7-8d12-4be65f0818d4	d8301b4c-7f7b-4fc2-b53a-bdce30829509.rna_seq.augmented_star_gene_counts.tsv	4230665	C3L-02621	C3L-02621-08	Solid Tissue Normal	CPTAC-3
+332622c4-4ef3-4e8d-809c-2388f7eaf9ce	d2cba871-5d89-474b-9adb-dbdb83a5b85f.rna_seq.augmented_star_gene_counts.tsv	4230383	C3N-01338	C3N-01338-02	Primary Tumor	CPTAC-3
+1a10d8c1-7956-4975-a843-5f8fb39f9972	4599fd14-5873-418e-8997-452f2942faf4.rna_seq.augmented_star_gene_counts.tsv	4226141	C3N-01338	C3N-01338-05	Solid Tissue Normal	CPTAC-3
+d82506fc-4bae-4291-a663-b89d86215264	eacd4976-8bb2-4c4c-817d-61cbf926be88.rna_seq.augmented_star_gene_counts.tsv	4225332	C3N-00299	C3N-00299-02	Primary Tumor	CPTAC-3
+d9a9ced1-4b0a-4380-9c2e-8dfc8207a354	c6a7ffcc-71b4-46d1-b1c7-965b8cdec4ea.rna_seq.augmented_star_gene_counts.tsv	4231579	C3N-00822	C3N-00822-01	Primary Tumor	CPTAC-3
+630a2f91-bb02-4cce-afd9-f1aa4d2a296c	7efa006b-fa95-4982-9567-35a270df0c6a.rna_seq.augmented_star_gene_counts.tsv	4258967	C3N-00822	C3N-00822-11	Primary Tumor	CPTAC-3
+e6b0b1d2-b3cf-4fa2-b479-afa445dae606	ed07a9fb-a1f1-402a-a0de-fab047778a2c.rna_seq.augmented_star_gene_counts.tsv	4224499	C3L-03378	C3L-03378-05	Solid Tissue Normal	CPTAC-3
+a168c121-eea2-4193-b802-e61a29a25674	0c6ad72e-72d0-485d-ad3b-5d14b5df508d.rna_seq.augmented_star_gene_counts.tsv	4224851	C3N-01340	C3N-01340-01	Primary Tumor	CPTAC-3
+82052ddd-428d-4fec-b8ea-6fb190ea9b70	e81c43a4-4b5a-49ac-8383-63bea61f2e0e.rna_seq.augmented_star_gene_counts.tsv	4234051	C3N-02730	C3N-02730-01	Primary Tumor	CPTAC-3
+6f22ea38-259d-4ca7-a3fa-d870963a732b	35fd5fd5-d4dc-45cd-b1df-ed09ae8525cc.rna_seq.augmented_star_gene_counts.tsv	4225844	C3N-01340	C3N-01340-05	Solid Tissue Normal	CPTAC-3
+c31dcfe3-46ba-4189-890d-507bc165cabe	a47eebc9-3568-4784-a121-886bce7246b8.rna_seq.augmented_star_gene_counts.tsv	4229109	C3N-03013	C3N-03013-01	Primary Tumor	CPTAC-3
+f09537ce-c35f-4d88-adf6-877ebe1c1dc9	2758c96d-c865-4c40-bb6b-2112716f382c.rna_seq.augmented_star_gene_counts.tsv	4237582	C3N-03888	C3N-03888-02	Primary Tumor	CPTAC-3
+d06b6055-7a25-4d07-b504-0879410610f7	3ed686c4-ad3d-4889-b667-6ced4cae4585.rna_seq.augmented_star_gene_counts.tsv	4210966	C3N-03888	C3N-03888-12	Primary Tumor	CPTAC-3
+1f93e507-553d-40e5-974c-eb98b95be2b7	2de91600-2e58-445d-b913-73cd12887c67.rna_seq.augmented_star_gene_counts.tsv	4227428	C3N-03012	C3N-03012-01	Primary Tumor	CPTAC-3
+2d223ec9-7c2c-4dc1-8299-e12c1eeb8773	489d7297-5125-49f0-a251-c189fbf03b1e.rna_seq.augmented_star_gene_counts.tsv	4232597	C3N-00825	C3N-00825-04	Primary Tumor	CPTAC-3
+9262704c-6c07-4e43-9bb2-49cf9eff24dc	f8cb6a9c-1c9c-431b-9751-e28d17768470.rna_seq.augmented_star_gene_counts.tsv	4236625	C3N-00204	C3N-00204-06	Solid Tissue Normal	CPTAC-3
+95bc11c4-7aa7-41d1-9892-dacb0c71e26c	5ad85fda-6ab0-4281-8af4-aab9a3022a7d.rna_seq.augmented_star_gene_counts.tsv	4223909	C3N-01859	C3N-01859-01	Primary Tumor	CPTAC-3
+56377584-a94f-4930-a173-afeaf0170451	bd4d9c1c-d1b7-49b7-aa3b-7960262a89ed.rna_seq.augmented_star_gene_counts.tsv	4229640	C3N-01859	C3N-01859-11	Primary Tumor	CPTAC-3
+bd5e35ff-e842-4b62-9d28-b81460b43ff1	55f2f99e-8029-4dc7-aaf8-bc867a5f4ea2.rna_seq.augmented_star_gene_counts.tsv	4224406	C3N-01946	C3N-01946-04	Solid Tissue Normal	CPTAC-3
+eac6fa0d-7f66-4f1b-a3ce-42b6850611ee	0496eb1a-fcc5-4d38-af63-9156a800301b.rna_seq.augmented_star_gene_counts.tsv	4226329	C3N-03876	C3N-03876-02	Primary Tumor	CPTAC-3
+f8209915-80bb-4163-b498-002be49cdd01	10f7642e-5e43-49c8-b9a2-b3b67e87a286.rna_seq.augmented_star_gene_counts.tsv	4233355	C3N-03849	C3N-03849-03	Solid Tissue Normal	CPTAC-3
+d834163a-f37a-4a28-b5b8-42974062f791	3ca0ddaf-b51b-4818-8c22-f435764737f1.rna_seq.augmented_star_gene_counts.tsv	4247774	C3N-04276	C3N-04276-01	Primary Tumor	CPTAC-3
+9895335f-c8a4-469e-a5b0-92e9e994ee37	f8d148a6-90d6-4dc0-b15c-faa619cc56d7.rna_seq.augmented_star_gene_counts.tsv	4238555	C3N-04273	C3N-04273-01	Primary Tumor	CPTAC-3
+8f4d759f-e6ad-490e-b723-2e6a46d7d433	e2833812-6956-4a73-beba-4bc833069a07.rna_seq.augmented_star_gene_counts.tsv	4235763	C3N-04277	C3N-04277-02	Primary Tumor	CPTAC-3
+55cb7bab-aa13-41de-bf3c-0aa7e69e5370	9ee95f3c-9ef2-4e61-b023-699e0bc3898a.rna_seq.augmented_star_gene_counts.tsv	4229331	C3N-03028	C3N-03028-01	Primary Tumor	CPTAC-3
+771fa67e-d1c3-4f9b-a32e-cab14998452f	205b5dc8-48fd-41e3-8447-8a33e631094f.rna_seq.augmented_star_gene_counts.tsv	4232799	C3L-04791	C3L-04791-06	Solid Tissue Normal	CPTAC-3
+e4c3567e-6741-4534-bffc-28a2b8addbd8	3f33f7e6-e5ae-429c-bc3f-e6221d9c7e45.rna_seq.augmented_star_gene_counts.tsv	4233528	C3N-03028	C3N-03028-04	Solid Tissue Normal	CPTAC-3
+fd8b412e-859b-47cb-85ab-dd8abca19df4	d8e37316-4377-4d9c-bcce-ef831d2e2f33.rna_seq.augmented_star_gene_counts.tsv	4231021	C3N-03878	C3N-03878-03	Solid Tissue Normal	CPTAC-3
+6aba06ad-2d62-4ff1-9f76-651add05197a	622b128a-ad56-4121-b304-b3433e6a2871.rna_seq.augmented_star_gene_counts.tsv	4235051	C3N-04279	C3N-04279-01	Primary Tumor	CPTAC-3
+ed03c937-35d7-415e-b91b-24aaafbc213c	2390fd7d-2d7a-4613-acdd-a5a3891a2d8c.rna_seq.augmented_star_gene_counts.tsv	4230720	C3N-01943	C3N-01943-02	Primary Tumor	CPTAC-3
+9e38d7c4-22d2-44af-8296-8d32c94c9b6d	e272c50c-7f05-438b-8025-6e45a7e45567.rna_seq.augmented_star_gene_counts.tsv	4231853	C3N-01943	C3N-01943-06	Solid Tissue Normal	CPTAC-3
+f7355e9e-baf9-4965-95cd-370002520c14	c39411e8-f391-4fc1-895e-fe0338975550.rna_seq.augmented_star_gene_counts.tsv	4233990	C3N-04152	C3N-04152-06	Solid Tissue Normal	CPTAC-3
+1c621325-1cb3-4150-8eaf-f9d3c87512a2	e11daef0-5e35-4f08-91af-134d152dc2cc.rna_seq.augmented_star_gene_counts.tsv	4217312	C3N-03008	C3N-03008-11	Primary Tumor	CPTAC-3
+f2b55581-fc93-4962-ab74-032e23cc7286	719dd013-5dcc-4da9-8305-90924f68c106.rna_seq.augmented_star_gene_counts.tsv	4208328	C3L-01138	C3L-01138-11	Primary Tumor	CPTAC-3
+534d5eaf-5bfd-48cc-b5e2-abd2f8bb285e	cb0b6ca6-4f93-4786-b026-1e663b77f855.rna_seq.augmented_star_gene_counts.tsv	4157823	C3N-02695	C3N-02695-12	Primary Tumor	CPTAC-3
+597f54b2-8030-42e8-bb32-57b18ca5d2ae	af9c7410-952e-4b53-bcb7-7d0f519c9fce.rna_seq.augmented_star_gene_counts.tsv	4227491	C3L-00995	C3L-00995-02	Primary Tumor	CPTAC-3
+b4940d82-1efc-45e9-a309-1b6193677c27	833cb7cc-7ba9-4a96-b6d9-1fd3563317b3.rna_seq.augmented_star_gene_counts.tsv	4214057	C3N-01754	C3N-01754-14	Primary Tumor	CPTAC-3
+1ca7e6d1-0edf-4b4b-abc3-de208886906d	1a041bfa-a18e-4bf0-afa6-e13308c3ed71.rna_seq.augmented_star_gene_counts.tsv	4232809	C3N-04277	C3N-04277-04	Solid Tissue Normal	CPTAC-3
+68fab582-d4c0-4dc8-8c38-ce7fd79dcbcb	00ed44f5-e994-4897-ac69-c085941b3ae7.rna_seq.augmented_star_gene_counts.tsv	4216054	C3N-03028	C3N-03028-11	Primary Tumor	CPTAC-3
+c91e89b9-1b6c-4ed6-ae45-9b8fb3b2a41e	c8f96056-f784-4d3c-a4d8-2df423015991.rna_seq.augmented_star_gene_counts.tsv	4229396	C3N-01945	C3N-01945-01	Primary Tumor	CPTAC-3
+cc5f8174-e5e9-488b-ba56-7488c4eac82e	05ac3e7c-1b87-4391-83c9-d0e0a95f1a56.rna_seq.augmented_star_gene_counts.tsv	4230725	C3N-02700	C3N-02700-01	Primary Tumor	CPTAC-3
+328918b0-56c1-4b44-bd04-53dc5013f246	d14851b9-a42e-474c-b085-347fa776cb63.rna_seq.augmented_star_gene_counts.tsv	4238783	C3N-02714	C3N-02714-02	Primary Tumor	CPTAC-3
+2b6ab4b2-454c-4f59-a7da-7019e4012204	5ac381cb-b71e-4436-96b8-1582b0fbcfd2.rna_seq.augmented_star_gene_counts.tsv	4217793	C3N-03008	C3N-03008-01	Primary Tumor	CPTAC-3
+523f1967-264d-4f05-b6e7-c04bdafb5e64	5d1a3afa-5b54-4cb2-8040-dff428cd91c2.rna_seq.augmented_star_gene_counts.tsv	4237444	C3N-03619	C3N-03619-02	Primary Tumor	CPTAC-3
+00a92589-6683-4500-9c24-58869820e41b	6ca74d98-86ba-43a9-bd85-f8a097202ce9.rna_seq.augmented_star_gene_counts.tsv	4225167	C3L-01138	C3L-01138-01	Primary Tumor	CPTAC-3
+6bca3e04-5a97-4c80-a49b-57157c164267	00891109-a669-4f4e-b25f-b6bb5ffde417.rna_seq.augmented_star_gene_counts.tsv	4226059	C3N-02695	C3N-02695-01	Primary Tumor	CPTAC-3
+b1b12b6c-2f49-4f58-9f9e-61e83a166b0b	daa92392-c0c0-4248-902c-43ab616bbdf9.rna_seq.augmented_star_gene_counts.tsv	4234782	C3N-03783	C3N-03783-01	Primary Tumor	CPTAC-3
+4e71b9b7-7bc5-44cf-abc7-ebf9c563f41c	210ba0b2-c35d-4e42-b5ed-28e5b65bb727.rna_seq.augmented_star_gene_counts.tsv	4227289	C3L-00999	C3L-00999-01	Primary Tumor	CPTAC-3
+377c6394-1b92-4d92-aad7-233a8c8f17fc	6f059824-e488-46ce-84a2-b0523c9c9136.rna_seq.augmented_star_gene_counts.tsv	4230129	C3N-03433	C3N-03433-02	Primary Tumor	CPTAC-3
+591a82f0-2009-406a-9679-189ff54b1815	0243bbd9-028a-4f49-979b-b3a01e8aacc0.rna_seq.augmented_star_gene_counts.tsv	4240749	C3N-03612	C3N-03612-03	Primary Tumor	CPTAC-3
+63008c02-e5ec-43e0-baff-22353cb3c489	fe811d03-e73a-41b7-a98b-d1af3f4b32ef.rna_seq.augmented_star_gene_counts.tsv	4252800	C3N-03490	C3N-03490-12	Primary Tumor	CPTAC-3
+7a0ed3cd-c398-4115-9e80-b6f09290ec6c	ba31b492-6d7d-4890-bd48-10be7faa27fd.rna_seq.augmented_star_gene_counts.tsv	4233095	C3N-03490	C3N-03490-06	Solid Tissue Normal	CPTAC-3
+9c19901d-026e-48cb-af40-df4774219ba1	574a3bd8-a791-4658-9193-39de5a2eb77c.rna_seq.augmented_star_gene_counts.tsv	4242946	C3L-04354	C3L-04354-02	Primary Tumor	CPTAC-3
+f5acbee1-153c-44bc-827d-cc58041251ae	f56b3e61-c601-43b4-bed6-449051d2dde1.rna_seq.augmented_star_gene_counts.tsv	4242594	C3N-03011	C3N-03011-04	Primary Tumor	CPTAC-3
+0aeb897e-96bf-4a84-baea-540cd725a79c	8fcbf45d-bef1-4af4-a543-0f6d50e0454f.rna_seq.augmented_star_gene_counts.tsv	4223808	C3N-03045	C3N-03045-02	Solid Tissue Normal	CPTAC-3
+4a59ec96-f82d-48cc-bad3-5bc330e56325	bc8dc68b-f754-45d6-b9a2-6e679a11a030.rna_seq.augmented_star_gene_counts.tsv	4229271	C3L-01237	C3L-01237-06	Solid Tissue Normal	CPTAC-3
+7b24d322-c8d8-487e-bfa1-9825e07874c9	c3c7f008-08ce-4b39-98d2-1c0734b76dc2.rna_seq.augmented_star_gene_counts.tsv	4229933	C3L-01237	C3L-01237-04	Primary Tumor	CPTAC-3
+f3e540b8-0485-4d55-b328-eec8005b0872	961e8468-a0fb-45c2-8362-8c2218eced1c.rna_seq.augmented_star_gene_counts.tsv	4249222	C3L-01237	C3L-01237-14	Primary Tumor	CPTAC-3
+e9f6181a-c330-480e-ad23-99ae5316b230	db43c1aa-039d-4a01-b82f-52f9e6412a15.rna_seq.augmented_star_gene_counts.tsv	4235031	C3N-03488	C3N-03488-13	Primary Tumor	CPTAC-3
+07a9f4e3-baca-46c7-aaaa-174b54683883	e639308c-2adb-4a18-9cf8-a3df9b0fb0d7.rna_seq.augmented_star_gene_counts.tsv	4228212	C3N-03488	C3N-03488-03	Primary Tumor	CPTAC-3
+646829d7-cbe5-42cc-9a8a-8b6a372bb950	19cc24e1-37a8-4be2-bc29-808179691693.rna_seq.augmented_star_gene_counts.tsv	4239369	C3N-04611	C3N-04611-11	Primary Tumor	CPTAC-3
+4b54787c-1d93-460d-8815-a534d0d06313	ee856111-d8b1-41f3-9193-47ebfef9ef29.rna_seq.augmented_star_gene_counts.tsv	4266995	C3N-04611	C3N-04611-11	Primary Tumor	CPTAC-3
+4cb589b5-20be-46ea-b781-509b3a0b0def	27b987fe-03e5-4562-858b-dcc6fb21da5e.rna_seq.augmented_star_gene_counts.tsv	4221295	C3N-02279	C3N-02279-11	Primary Tumor	CPTAC-3
+02b1a443-745c-4b45-bcad-de47d535f8d9	fc08da88-0292-4bc2-b1a1-3052ee6f1358.rna_seq.augmented_star_gene_counts.tsv	4221239	C3N-02279	C3N-02279-01	Primary Tumor	CPTAC-3
+88060946-aae4-4fb1-8f85-92159eb5718e	839b324e-91af-49c0-b5e0-eb5e7ebce2fe.rna_seq.augmented_star_gene_counts.tsv	4231312	C3N-01756	C3N-01756-05	Solid Tissue Normal	CPTAC-3
+3f132f1a-a5f6-4e74-aaa9-2aa4fd720906	ecccec14-5846-41f9-a741-e7d709409245.rna_seq.augmented_star_gene_counts.tsv	4227896	C3N-01948	C3N-01948-04	Solid Tissue Normal	CPTAC-3
+03576427-0b1e-473b-a691-75ceea9d945c	405f682f-93c7-4211-8364-2d81918c46bd.rna_seq.augmented_star_gene_counts.tsv	4230972	C3N-01948	C3N-01948-01	Primary Tumor	CPTAC-3
+72497b97-dac3-492a-adaa-7e1fc6ca1829	dc96d36d-3343-47cb-8111-f75e97f21539.rna_seq.augmented_star_gene_counts.tsv	4231398	C3N-03849	C3N-03849-02	Primary Tumor	CPTAC-3
+1c0e3570-5a77-4194-a074-5765051d49ab	3d7b05ab-8781-44f9-9ae7-881bfdf01e08.rna_seq.augmented_star_gene_counts.tsv	4230677	C3N-03782	C3N-03782-01	Primary Tumor	CPTAC-3
+75e3998b-5e02-41cd-b22b-f650046993fe	115f6eaf-76fa-43a7-8bda-9a2f83d1613a.rna_seq.augmented_star_gene_counts.tsv	4199054	C3N-03782	C3N-03782-11	Primary Tumor	CPTAC-3
+0b96964c-0bd9-48e9-8f97-c3791e0dbf6a	b5f3a015-214d-413d-bf63-fd6f92fde1c9.rna_seq.augmented_star_gene_counts.tsv	4237177	C3N-02716	C3N-02716-13	Primary Tumor	CPTAC-3
+1c365ed3-bf93-4101-baae-2693408b0457	7a0f8098-6251-4c7a-874d-c6e636deb88f.rna_seq.augmented_star_gene_counts.tsv	4235674	C3N-02716	C3N-02716-03	Primary Tumor	CPTAC-3
+361009f5-591e-45ff-9ba3-5553c7dcffcd	73e334f3-fe29-478a-aaf3-12e7010ecfb0.rna_seq.augmented_star_gene_counts.tsv	4233884	C3N-04277	C3N-04277-12	Primary Tumor	CPTAC-3
+ca1abc64-6039-4107-9dc0-ab63056100eb	76b0f07a-18fe-4944-86d6-69ad91105208.rna_seq.augmented_star_gene_counts.tsv	4237077	C3L-04791	C3L-04791-04	Primary Tumor	CPTAC-3
+d5da344c-92ed-4d2f-8d7f-1b26b90d587a	5019b83b-2247-42f7-a0fc-abbf13c93bf7.rna_seq.augmented_star_gene_counts.tsv	4227709	C3N-03878	C3N-03878-01	Primary Tumor	CPTAC-3
+ed1f0f7a-3d9d-4569-9972-8ad96c38eb2c	0290399e-1ee7-4b96-a482-5db47d84b606.rna_seq.augmented_star_gene_counts.tsv	4129521	C3N-02700	C3N-02700-11	Primary Tumor	CPTAC-3
+9a6953dc-1be0-44a1-b5d7-a2b44839d2a5	3a430c14-6124-4a8d-9090-d5182295debf.rna_seq.augmented_star_gene_counts.tsv	4231207	C3N-04152	C3N-04152-11	Primary Tumor	CPTAC-3
+6821a4da-74ac-4e19-8419-b020a87b733a	3cab240e-1014-410a-b627-81ddbe16643a.rna_seq.augmented_star_gene_counts.tsv	4229663	C3N-04152	C3N-04152-01	Primary Tumor	CPTAC-3
+c8983b4c-5045-403b-9233-a54b86d7176b	66fedd31-256b-451d-8e75-74ec8260fbf9.rna_seq.augmented_star_gene_counts.tsv	4228011	C3N-02714	C3N-02714-06	Solid Tissue Normal	CPTAC-3
+75e1d760-45a0-4ccb-8bf3-941f8ea1862c	573ed713-ce22-445e-a77a-ba0a2a79644f.rna_seq.augmented_star_gene_counts.tsv	4233118	C3N-03619	C3N-03619-06	Solid Tissue Normal	CPTAC-3
+c982f277-a9a1-4ad1-95f5-4c4ca07cfcc3	831aaf71-5956-4783-93df-c4ac628ce7a5.rna_seq.augmented_star_gene_counts.tsv	4232781	C3L-01138	C3L-01138-06	Solid Tissue Normal	CPTAC-3
+842bbaaa-33ee-4ac2-bb01-e2efd53e7977	22f1bc7d-e66a-43ba-827a-a7b4c034ff62.rna_seq.augmented_star_gene_counts.tsv	4225469	C3N-01754	C3N-01754-05	Solid Tissue Normal	CPTAC-3
+68099d1c-ef62-4695-8b8c-f3d728f109d2	7de3d059-5571-409c-8e13-de935ac8c252.rna_seq.augmented_star_gene_counts.tsv	4228449	C3L-00995	C3L-00995-06	Solid Tissue Normal	CPTAC-3
+517599b4-5ada-4763-a59f-f222caa50fed	ed80d59e-8f5c-4b32-b6f4-3b8e4badd5d5.rna_seq.augmented_star_gene_counts.tsv	4160146	C3L-00995	C3L-00995-12	Primary Tumor	CPTAC-3
+9a32b693-bea7-470f-9aaf-1cb738e3981f	7b394a9a-8d54-463c-b021-4d45877f6864.rna_seq.augmented_star_gene_counts.tsv	4213630	C3N-02727	C3N-02727-06	Solid Tissue Normal	CPTAC-3
+7c8e53fa-506e-46f1-b5ee-a2a31c3cb747	77cc56f0-b249-4c68-b5b9-5915cb7ba6b7.rna_seq.augmented_star_gene_counts.tsv	4164925	C3N-02727	C3N-02727-12	Primary Tumor	CPTAC-3
+93457484-6f3e-46b5-a2ff-0d10a7d531d2	eb6d765d-210d-48e9-a0d5-4f4f1ac9389f.rna_seq.augmented_star_gene_counts.tsv	4237943	C3N-02727	C3N-02727-02	Primary Tumor	CPTAC-3
+d82b6ec5-b780-4233-9f41-cc1ddc15c8cc	9339834f-687d-497a-836b-f1576aa56752.rna_seq.augmented_star_gene_counts.tsv	4239003	C3N-02694	C3N-02694-03	Primary Tumor	CPTAC-3
+f8ff148f-384f-419b-bd93-16f0e21f79c5	178c6c17-aeaa-4663-949f-8ddd2ddfe282.rna_seq.augmented_star_gene_counts.tsv	4237431	C3N-03009	C3N-03009-01	Primary Tumor	CPTAC-3
+164a4fb0-521c-4e3b-bc2c-4ec56e875232	70a6bbd2-bebd-4571-9bb9-52d2b138a0da.rna_seq.augmented_star_gene_counts.tsv	4248934	C3N-01755	C3N-01755-01	Primary Tumor	CPTAC-3
+331592c3-0ef2-4b1e-ad9c-107f5dd92880	49407407-1983-4788-8f8d-c0be597f8f28.rna_seq.augmented_star_gene_counts.tsv	4229108	C3N-01758	C3N-01758-03	Primary Tumor	CPTAC-3
+06b116f9-cd37-4156-8032-c5d34b2d34fb	35c40966-c556-4848-8738-bca58081217c.rna_seq.augmented_star_gene_counts.tsv	4234989	C3L-00987	C3L-00987-01	Primary Tumor	CPTAC-3
+ceffc9aa-0223-4f66-a8e8-9c8cbcc0ed49	57443e9a-1907-4269-81bc-0a768fc2d0ec.rna_seq.augmented_star_gene_counts.tsv	4232205	C3N-03933	C3N-03933-06	Solid Tissue Normal	CPTAC-3
+e435f0d8-fc4d-4be2-82ad-e546bc3397a0	370e4ce8-eaa0-4342-ae3e-9aad8c294c7a.rna_seq.augmented_star_gene_counts.tsv	4233573	C3L-02617	C3L-02617-03	Primary Tumor	CPTAC-3
+f22083fe-b168-4dc0-8058-8934108164c2	49fa9961-1d30-49f3-8fe4-552f99416b5d.rna_seq.augmented_star_gene_counts.tsv	4238709	C3N-03783	C3N-03783-11	Primary Tumor	CPTAC-3
+62d9fd46-420f-406e-b2eb-194fd44f5d34	2544d900-8e7b-41ef-b716-8936707cbabe.rna_seq.augmented_star_gene_counts.tsv	4229335	C3L-00999	C3L-00999-06	Solid Tissue Normal	CPTAC-3
+70a7bca8-4ac4-4994-b298-bcc558690cda	80cd7e58-d390-4e55-8036-f2c3d997a56c.rna_seq.augmented_star_gene_counts.tsv	4223990	C3N-03487	C3N-03487-02	Primary Tumor	CPTAC-3
+103465af-7843-4bd7-a042-c0808f98a764	e06c5542-5d65-4aec-bbce-b380963abdf2.rna_seq.augmented_star_gene_counts.tsv	4257415	C3N-03612	C3N-03612-13	Primary Tumor	CPTAC-3
+2b2db041-0330-4f2e-9e9d-489178e5ede6	13f5d33f-2968-476f-a221-ec854cde98aa.rna_seq.augmented_star_gene_counts.tsv	4244340	C3N-01947	C3N-01947-12	Primary Tumor	CPTAC-3
+f9f6053c-517c-4eaa-9de5-76af46737449	4d4602b3-cccf-494f-8c1b-abfb625790a3.rna_seq.augmented_star_gene_counts.tsv	4229897	C3N-01947	C3N-01947-05	Solid Tissue Normal	CPTAC-3
+88221ce2-76a7-48bc-b657-b11bfb1a4800	b17dce49-b28f-433e-b5c9-31d7c26c84b4.rna_seq.augmented_star_gene_counts.tsv	4223730	C3N-03490	C3N-03490-02	Primary Tumor	CPTAC-3
+4a6bf97c-e9c9-4e86-98de-c198cfc8beb3	577c76d3-7857-4986-b255-703f861399cf.rna_seq.augmented_star_gene_counts.tsv	4243000	C3N-01858	C3N-01858-11	Primary Tumor	CPTAC-3
+8974d265-4154-45a9-b770-8710c842a129	4ab84dfe-3229-4198-b203-af14d6724f6b.rna_seq.augmented_star_gene_counts.tsv	4230586	C3L-04354	C3L-04354-07	Solid Tissue Normal	CPTAC-3
+5ecf2320-6d0d-45ad-92d6-d7ab072fd5f3	9bfe1f0c-f85c-4bee-a657-512e3bce8bf1.rna_seq.augmented_star_gene_counts.tsv	4222701	C3N-03045	C3N-03045-11	Primary Tumor	CPTAC-3
+21406c8e-fd3b-4b31-a596-277b49508e5d	645ed983-48cb-4eea-ac3f-5da66d5b81d8.rna_seq.augmented_star_gene_counts.tsv	4236032	C3N-03488	C3N-03488-06	Solid Tissue Normal	CPTAC-3
+aea50bec-c901-422d-b316-df8834505eaa	e23d4b77-1701-4977-a23c-947b3021f1d9.rna_seq.augmented_star_gene_counts.tsv	4226685	C3N-03841	C3N-03841-01	Primary Tumor	CPTAC-3
+a3f6358e-ccdd-40be-b000-be3c72f3fb2f	52722565-916f-4657-bf0a-827c8935bdd8.rna_seq.augmented_star_gene_counts.tsv	4240879	C3N-03889	C3N-03889-06	Solid Tissue Normal	CPTAC-3
+0501a5c2-9eeb-4634-86b3-045094dfee3b	2f89f181-27f0-44db-81eb-cd3d43fb4565.rna_seq.augmented_star_gene_counts.tsv	4227644	C3N-04611	C3N-04611-06	Solid Tissue Normal	CPTAC-3
+63e70a0c-39bf-4527-ab72-9f7ad7b5dbe8	b5bf29b3-e474-45ba-adfc-c20b79dcee41.rna_seq.augmented_star_gene_counts.tsv	4232022	C3N-04611	C3N-04611-01	Primary Tumor	CPTAC-3
+ce5ef756-d9f5-4dd5-956f-a7ec83d061c2	72bc7462-f76d-410b-91b4-76bd54955810.rna_seq.augmented_star_gene_counts.tsv	4229411	C3N-03781	C3N-03781-01	Primary Tumor	CPTAC-3
+36bc2862-6e33-4524-9d35-1e04c76674f6	e8ebc9d1-c84b-4a29-a970-4e70c6f2fbc1.rna_seq.augmented_star_gene_counts.tsv	4239703	C3N-02694	C3N-02694-12	Primary Tumor	CPTAC-3
+11592ecd-1023-489a-a367-d37f7e6e3b90	5c0438ae-eb68-4613-bb06-1254a28f4570.rna_seq.augmented_star_gene_counts.tsv	4214738	C3L-00977	C3L-00977-02	Primary Tumor	CPTAC-3
+555ba22b-d79e-4c32-be62-8ca6614d40cf	b4641ae8-8896-4167-9d60-03b614fb3908.rna_seq.augmented_star_gene_counts.tsv	4243626	C3L-00977	C3L-00977-12	Primary Tumor	CPTAC-3
+0bbf7428-7832-4f18-9503-7812adf8cea6	4f5e3ac2-4ea7-41bd-bec6-ed1a75ff0519.rna_seq.augmented_star_gene_counts.tsv	4196067	C3L-00977	C3L-00977-06	Solid Tissue Normal	CPTAC-3
+59671194-d9b4-42a4-88b1-d95bcb7b8e7d	594ab534-9266-4d20-95f4-69e0a5837643.rna_seq.augmented_star_gene_counts.tsv	4236040	C3N-03015	C3N-03015-01	Primary Tumor	CPTAC-3
+2ef40a35-a98c-4474-9e94-6d661afb90a2	948198fa-f7da-4dfa-b632-052bee55f41e.rna_seq.augmented_star_gene_counts.tsv	4247086	C3L-00987	C3L-00987-11	Primary Tumor	CPTAC-3
+26b3ecac-3b15-487b-ba1e-1af1bacd60d6	941fab72-d48d-46d4-8aeb-f395141c31c6.rna_seq.augmented_star_gene_counts.tsv	4223320	C3N-03933	C3N-03933-03	Primary Tumor	CPTAC-3
+c5ccaf12-7841-4d16-b1af-33aab9eec26b	f3c0a696-de6d-424d-b684-186956bb9472.rna_seq.augmented_star_gene_counts.tsv	4237789	C3N-03456	C3N-03456-01	Primary Tumor	CPTAC-3
+e5ce92d0-3ec6-4f3d-aa8f-7e73d9794576	34242a6b-7196-4c6f-b74c-83c0c2d81c2a.rna_seq.augmented_star_gene_counts.tsv	4182299	C3L-00999	C3L-00999-11	Primary Tumor	CPTAC-3
+a000aea9-1e0a-485d-9b71-1a4d6d8193e9	82d637dd-e5d3-4919-9255-897330b0b19d.rna_seq.augmented_star_gene_counts.tsv	4226021	C3N-03612	C3N-03612-06	Solid Tissue Normal	CPTAC-3
+f66baf3e-d28d-4973-b694-7e7824fb8ce5	c9b176e7-8866-467b-80e2-7a5c7f65f1ca.rna_seq.augmented_star_gene_counts.tsv	4235470	C3N-04278	C3N-04278-01	Primary Tumor	CPTAC-3
+cf03bfe6-de7e-4119-b4fc-679c6a1f9e38	6986dd77-798c-42af-bbeb-bee3976f33e5.rna_seq.augmented_star_gene_counts.tsv	4213728	C3N-01858	C3N-01858-01	Primary Tumor	CPTAC-3
+df9db8a7-005c-48dc-9e72-b626d4548b1a	bfb3a4ae-1dc8-4bf4-8fdd-13d3878f4d32.rna_seq.augmented_star_gene_counts.tsv	4221548	C3N-03045	C3N-03045-01	Primary Tumor	CPTAC-3
+820fdf14-4fd7-4c8c-8e25-c56be4fcd5c0	a360f5ff-0bca-46a3-8e6a-4aa85df20eb2.rna_seq.augmented_star_gene_counts.tsv	4228432	C3N-01757	C3N-01757-04	Primary Tumor	CPTAC-3
+f560e813-cab3-4abf-af67-a2e0efc05530	419e4a59-3f1c-4703-83d7-ad257d86633e.rna_seq.augmented_star_gene_counts.tsv	4227678	C3N-01944	C3N-01944-01	Primary Tumor	CPTAC-3
+ecdd71f6-779a-492d-bc88-79f4f97efa5f	a701a538-1b24-457d-bf14-fc3c00b18bb0.rna_seq.augmented_star_gene_counts.tsv	4233353	C3N-01944	C3N-01944-04	Solid Tissue Normal	CPTAC-3
+4b0a0b1c-1ce6-4758-9beb-88f2b6984e23	07880979-24b7-49b8-8235-4fd62c554755.rna_seq.augmented_star_gene_counts.tsv	4247050	C3N-01944	C3N-01944-11	Primary Tumor	CPTAC-3
+7eb1b0d3-d9d9-43ee-8d7a-2d8415ba363a	e8492f2f-a11a-42e3-b2c1-a727d16144ed.rna_seq.augmented_star_gene_counts.tsv	4234694	C3N-03785	C3N-03785-03	Primary Tumor	CPTAC-3
+c1efe4d7-01ff-4131-a4a7-a5cd1ec787c0	3e315cd5-50e5-4282-8631-16327b31d564.rna_seq.augmented_star_gene_counts.tsv	4238209	C3N-03785	C3N-03785-13	Primary Tumor	CPTAC-3
+bf92671e-d883-4ab5-849b-4ec9ed672cf4	5c7aca3c-7e8b-40ae-945b-c9bbb1e9222f.rna_seq.augmented_star_gene_counts.tsv	4211113	C3N-02275	C3N-02275-04	Primary Tumor	CPTAC-3
+911ddb69-7665-4737-9b08-25deb9a08fd6	b20c5cf8-1a68-47c9-8735-d68105e4d02e.rna_seq.augmented_star_gene_counts.tsv	4228704	C3N-02275	C3N-02275-02	Solid Tissue Normal	CPTAC-3
+c7750853-7ac7-4e78-ba93-d31f60e057d5	11af45c5-f22d-41f7-80f0-a1a11ba2c90e.rna_seq.augmented_star_gene_counts.tsv	4250176	C3N-02275	C3N-02275-13	Primary Tumor	CPTAC-3
+a9c0df04-603b-4ff5-92dc-351a4376e209	5ce1c097-df52-480d-b88e-26b692d4b351.rna_seq.augmented_star_gene_counts.tsv	4224628	C3N-03841	C3N-03841-03	Solid Tissue Normal	CPTAC-3
+b4ea3d51-a6a8-47b4-bd9c-479fadfde04b	72cc7035-01db-41a4-830a-247eb875df40.rna_seq.augmented_star_gene_counts.tsv	4227692	C3N-03664	C3N-03664-01	Primary Tumor	CPTAC-3
+5526d0c1-e8e0-4019-aa65-c9371790fde1	aa8d4ceb-8024-4c6b-b1a8-e848e900edeb.rna_seq.augmented_star_gene_counts.tsv	4225454	C3N-03664	C3N-03664-11	Primary Tumor	CPTAC-3
+f590b1ab-51c7-4ed1-9405-9ae12576375d	e4c0db3d-1759-4db9-939f-f69fc274d161.rna_seq.augmented_star_gene_counts.tsv	4198625	C3N-03889	C3N-03889-12	Primary Tumor	CPTAC-3
+48f89a00-be1e-4477-86de-772ce4dce7c7	b6b55841-7aa0-4d6c-a52d-a9b43ab1ae94.rna_seq.augmented_star_gene_counts.tsv	4235214	C3N-02279	C3N-02279-05	Solid Tissue Normal	CPTAC-3
+c047e420-16c1-411b-adbb-b831f623f0b9	0fc3b37c-1ed7-430b-86e5-afd1904c9072.rna_seq.augmented_star_gene_counts.tsv	4234691	C3N-02925	C3N-02925-01	Primary Tumor	CPTAC-3
+01def4d4-0464-4c53-8dfd-90fc89f5a3cc	fd454567-5f61-48d0-ba4c-ce2c409efec1.rna_seq.augmented_star_gene_counts.tsv	4242246	C3N-01755	C3N-01755-11	Primary Tumor	CPTAC-3
+51a72023-26af-4d14-8a56-30aecf0f1b0d	12f3c95d-26ef-47d4-ba42-e8c35cbd7d25.rna_seq.augmented_star_gene_counts.tsv	4221679	C3N-03015	C3N-03015-02	Solid Tissue Normal	CPTAC-3
+991ec855-8f55-4635-aaee-635e3a054d0b	b4c9ce3f-a918-4585-bf4a-4dc4b3f1c30b.rna_seq.augmented_star_gene_counts.tsv	4217400	C3N-01758	C3N-01758-13	Primary Tumor	CPTAC-3
+cc6b9a65-b10d-4df6-b225-c063d08c9938	2a9a5320-b45b-4a69-a9ad-0f56139d719c.rna_seq.augmented_star_gene_counts.tsv	4218309	C3N-03933	C3N-03933-13	Primary Tumor	CPTAC-3
+12f9695c-28ac-430e-8d9b-c2b72eeca858	b021eea6-83d1-45d5-b40c-d58785027433.rna_seq.augmented_star_gene_counts.tsv	4233140	C3L-02617	C3L-02617-07	Solid Tissue Normal	CPTAC-3
+776ee875-75a6-4f2b-8e53-8d4275006f77	a49fcd9d-3daa-4b12-83e9-d9f63c0caf16.rna_seq.augmented_star_gene_counts.tsv	4230703	C3N-03456	C3N-03456-11	Primary Tumor	CPTAC-3
+52944215-40b6-47d0-b677-20eb89b545c1	9f9b5cf1-f8cb-44b3-83df-c0904150b34b.rna_seq.augmented_star_gene_counts.tsv	4196796	C3N-03433	C3N-03433-12	Primary Tumor	CPTAC-3
+25e29a02-e56a-432a-8be5-c559c3745fe4	4b7e2f7a-9b9b-4e30-8fd3-afc4748c85ee.rna_seq.augmented_star_gene_counts.tsv	4234487	C3N-03487	C3N-03487-06	Solid Tissue Normal	CPTAC-3
+d9364b50-daaf-45fe-8f46-f75ff2a9b4fe	d053e53e-efee-4bcb-b156-bf2fd86192ea.rna_seq.augmented_star_gene_counts.tsv	4238041	C3N-03487	C3N-03487-12	Primary Tumor	CPTAC-3
+1d92209d-ab68-4765-aa93-3fd476244b5c	97503e75-6590-43ff-bf8b-3c260dc9f1f6.rna_seq.augmented_star_gene_counts.tsv	4231374	C3N-01947	C3N-01947-02	Primary Tumor	CPTAC-3
+d8d28948-1ec7-452f-a21b-92326d9f7ffa	603d7732-1de1-46ac-ba9d-1fdfa145c856.rna_seq.augmented_star_gene_counts.tsv	4222660	C3N-04278	C3N-04278-05	Solid Tissue Normal	CPTAC-3
+80f9170c-7faa-4656-8f54-fb9eacf05943	99b7c3b4-ad94-4736-850e-2533d0f3d31f.rna_seq.augmented_star_gene_counts.tsv	4205208	C3N-04278	C3N-04278-11	Primary Tumor	CPTAC-3
+8c61a256-2bb0-4eb9-bf3a-ba0707b796a2	46d72307-43a9-4cc8-9193-d680dfa7c3a2.rna_seq.augmented_star_gene_counts.tsv	4238620	C3N-02693	C3N-02693-11	Primary Tumor	CPTAC-3
+0739727d-44c9-439b-922e-874828e7f88f	c824c993-b307-4017-9dc4-4dd37b33e5ba.rna_seq.augmented_star_gene_counts.tsv	4232239	C3N-02693	C3N-02693-01	Primary Tumor	CPTAC-3
+96cf2779-c23b-4ff0-b655-540722354a92	4df44bd0-831c-4b4e-8c65-d118dec61087.rna_seq.augmented_star_gene_counts.tsv	4220140	C3N-03889	C3N-03889-02	Primary Tumor	CPTAC-3
+8f3feaef-821a-4d14-88d8-e306872f21a8	4059226a-d953-416c-8b2e-f40dfe13ceb6.rna_seq.augmented_star_gene_counts.tsv	4223919	C3N-01756	C3N-01756-11	Primary Tumor	CPTAC-3
+a864ddc3-44ae-49cc-9718-0b6713051d79	c2c0bc36-210f-45e6-8321-3a0821588afb.rna_seq.augmented_star_gene_counts.tsv	4246816	C3N-01756	C3N-01756-01	Primary Tumor	CPTAC-3
+2ef82f9c-ffa0-4b5f-967e-4cd677b6303a	7460c7a2-89f9-4c1a-ade3-cd7e092fc034.rna_seq.augmented_star_gene_counts.tsv	4206868	C3N-02925	C3N-02925-03	Solid Tissue Normal	CPTAC-3
+e2940473-03b6-4a56-a4e1-2bf11390fb3e	a502e16d-da04-44e9-a1c8-27d2d45724d3.rna_seq.augmented_star_gene_counts.tsv	4241548	C3N-01948	C3N-01948-11	Primary Tumor	CPTAC-3
+69511d2c-5b7a-4937-aef5-b31287de58e5	cbe420f8-431d-4fea-9b55-9f405f834ace.rna_seq.augmented_star_gene_counts.tsv	4229836	C3N-00295	C3N-00295-04	Primary Tumor	CPTAC-3
+3c087a45-36c2-4e42-aec6-0103a369f304	18bb6154-91fe-437a-be9a-108f458d9c83.rna_seq.augmented_star_gene_counts.tsv	4252425	C3N-00871	C3N-00871-11	Primary Tumor	CPTAC-3
+c0de327a-b5a7-4b1c-bb4d-970f3b0c3712	e0b14d73-d7bc-4069-9429-1f8fbfbce396.rna_seq.augmented_star_gene_counts.tsv	4233124	C3N-00871	C3N-00871-01	Primary Tumor	CPTAC-3
+8a4b631d-d9d8-4431-9381-b7cd75dbed15	08c53b8b-8ed6-47cb-9ccb-2982f852c895.rna_seq.augmented_star_gene_counts.tsv	4236173	C3N-00519	C3N-00519-02	Primary Tumor	CPTAC-3
+f9e3b043-8371-42c1-95f5-29d14212d6cd	8c5a96d6-2665-4ca9-abb1-719e8d841b60.rna_seq.augmented_star_gene_counts.tsv	4241458	C3N-00498	C3N-00498-04	Primary Tumor	CPTAC-3
+a390b5dd-5938-4ece-b15a-d37f00cdb8f2	8efa1233-2c93-4d81-a268-7972bb5e5a35.rna_seq.augmented_star_gene_counts.tsv	4246426	C3N-00846	C3N-00846-02	Primary Tumor	CPTAC-3
+9f44feb3-761b-4606-8641-f2f5fe595ad9	0ff0e56a-a835-4241-b663-0272eac3c552.rna_seq.augmented_star_gene_counts.tsv	4217122	C3N-00825	C3N-00825-13	Primary Tumor	CPTAC-3
+834908d0-d5a1-48b2-9065-42c31f2035b8	4600c1c0-1d41-48e3-9622-05ea538d5aae.rna_seq.augmented_star_gene_counts.tsv	4226770	C3N-01620	C3N-01620-03	Primary Tumor	CPTAC-3
+c0558045-6e17-48fa-9361-b02907a4cbc1	1b2725a7-f76f-4b9b-acff-3c67a0c9e0e4.rna_seq.augmented_star_gene_counts.tsv	4231319	C3N-00857	C3N-00857-02	Primary Tumor	CPTAC-3
+fda80388-60d8-4f21-a54e-d8133cacedd9	6529074d-c710-45ab-9d43-9a7f882f50d2.rna_seq.augmented_star_gene_counts.tsv	4238572	C3N-01645	C3N-01645-02	Primary Tumor	CPTAC-3
+04e0eb57-4746-4f17-9dc1-44023a033470	cf5ac1b1-c106-42cb-8fc9-e4c8e7f78f8b.rna_seq.augmented_star_gene_counts.tsv	4238314	C3N-00519	C3N-00519-05	Solid Tissue Normal	CPTAC-3
+ff17fa28-7713-4f12-bc8f-06978606c303	f5228d77-2768-4326-aef0-5e0948ec5738.rna_seq.augmented_star_gene_counts.tsv	4235176	C3N-00307	C3N-00307-02	Primary Tumor	CPTAC-3
+9261bfb5-3302-4bf4-ba6e-04032ec5aeef	a360d66c-82e7-428c-99cf-605401dc61f1.rna_seq.augmented_star_gene_counts.tsv	4242414	C3N-01337	C3N-01337-04	Primary Tumor	CPTAC-3
+4fdf20d0-d1c3-4b70-9f29-cf6f9beea3ac	ec696c1f-7367-4b8b-888c-4cfaca0b0e28.rna_seq.augmented_star_gene_counts.tsv	4261643	C3N-00204	C3N-00204-13	Primary Tumor	CPTAC-3
+b538b6e5-3a2b-47ce-bdf7-14febdb18dc8	915aac13-b396-486a-bd41-493d682a6113.rna_seq.augmented_star_gene_counts.tsv	4215381	C3N-00297	C3N-00297-03	Primary Tumor	CPTAC-3
+5cf996ce-af74-4015-9034-0bc910c230d1	a3b6638d-5487-4956-b262-d1c296c6bd5f.rna_seq.augmented_star_gene_counts.tsv	4235569	C3N-00829	C3N-00829-02	Primary Tumor	CPTAC-3
+5eb39a98-5bae-46bc-bd00-dabe6cdf165b	0816fbe5-a5b9-4278-97a8-45fc6a4abd8b.rna_seq.augmented_star_gene_counts.tsv	4243873	C3L-03378	C3L-03378-04	Primary Tumor	CPTAC-3
+f502d1b0-9447-4096-877b-00ea6240ca8d	305d1b5d-1311-4a67-8edf-426d163bd22e.rna_seq.augmented_star_gene_counts.tsv	4230629	C3L-03378	C3L-03378-14	Primary Tumor	CPTAC-3
+493df93a-bf2d-45bf-af73-ee0963bca6a5	9c68c943-b7ed-4d55-83f5-2fe66465c54c.rna_seq.augmented_star_gene_counts.tsv	4217668	C3N-03013	C3N-03013-11	Primary Tumor	CPTAC-3
+87f3fd52-11c3-4472-b931-bcbc6f530449	9b8d5e17-6ea7-42fe-9eff-f2c13ac24f61.rna_seq.augmented_star_gene_counts.tsv	4217472	C3N-03888	C3N-03888-06	Solid Tissue Normal	CPTAC-3
+b592aa01-cae4-4826-90d1-3c60906a223a	a7e2f852-f158-43aa-8cda-c928b932bc3b.rna_seq.augmented_star_gene_counts.tsv	4234244	C3N-03012	C3N-03012-11	Primary Tumor	CPTAC-3
+fb111d6d-2f0f-42c5-b710-d56635357b83	e1b843c3-5c6c-4078-94eb-aa59ae4237cd.rna_seq.augmented_star_gene_counts.tsv	4231347	C3N-01339	C3N-01339-02	Primary Tumor	CPTAC-3
+e3965c15-2ea7-4fc7-9d5a-ee1803923820	8362663c-31eb-403e-9eb0-dae02d02c8c9.rna_seq.augmented_star_gene_counts.tsv	4210341	C3N-01337	C3N-01337-06	Solid Tissue Normal	CPTAC-3
+3026350d-b41f-4a55-845f-43bd4e07a0e6	16c49d0c-b2b7-4d10-b9c2-894de09d5e9e.rna_seq.augmented_star_gene_counts.tsv	4246609	C3N-00306	C3N-00306-02	Primary Tumor	CPTAC-3
+408ffa15-5221-49b7-a9a7-2c7558447ed5	ccd9bcfe-77a9-4408-a3fa-f8dbcc53be76.rna_seq.augmented_star_gene_counts.tsv	4251161	C3N-00204	C3N-00204-04	Primary Tumor	CPTAC-3
+1fdf4863-b9b6-44c6-9619-7698b57d697b	9bc2d395-3787-419c-90e8-248b144560ba.rna_seq.augmented_star_gene_counts.tsv	4207453	C3N-01620	C3N-01620-13	Primary Tumor	CPTAC-3
+2fb34b6f-f299-4748-b4ec-191efd3f2216	59800e51-9cea-4c5e-ad55-ead51bb98d04.rna_seq.augmented_star_gene_counts.tsv	4238802	C3L-00997	C3L-00997-04	Primary Tumor	CPTAC-3
+52478ae4-f5c6-4e13-aa32-d5645a17cff3	19cf406d-6b0a-44ba-8af8-2641acdf3f96.rna_seq.augmented_star_gene_counts.tsv	4231135	C3L-02621	C3L-02621-01	Primary Tumor	CPTAC-3
+cc094d59-e1c6-4e5a-ab63-078bf48a5acc	f46b37ac-9e11-4e8b-b65d-a9b0eb9c7691.rna_seq.augmented_star_gene_counts.tsv	4230706	C3N-03027	C3N-03027-03	Solid Tissue Normal	CPTAC-3
+979f90df-c386-4258-815f-28cf7a63d438	126e3927-cb78-4708-a9c0-12b9c8471a87.rna_seq.augmented_star_gene_counts.tsv	4232835	C3N-03027	C3N-03027-01	Primary Tumor	CPTAC-3
+4408bd9c-803f-4707-be7a-dc9f12073c30	d57787e3-d57c-4cb1-91e9-32fa9859c13f.rna_seq.augmented_star_gene_counts.tsv	4226801	C3L-04025	C3L-04025-07	Solid Tissue Normal	CPTAC-3
+f93fd181-3f1c-470a-adde-f24efbcf5001	028311d8-11c1-409c-975c-2c1694bd8788.rna_seq.augmented_star_gene_counts.tsv	4177681	C3N-03226	C3N-03226-12	Primary Tumor	CPTAC-3
+427d1065-4f59-4d90-a193-472580643bc3	bf684da4-4753-42a5-bc5c-991db9bdb8f9.rna_seq.augmented_star_gene_counts.tsv	4229690	C3N-03226	C3N-03226-02	Primary Tumor	CPTAC-3
+52c18535-6854-4f89-a5b7-ad766cebfb29	36f94b97-5481-432b-8658-bd1fe2b0863e.rna_seq.augmented_star_gene_counts.tsv	4228056	C3L-04849	C3L-04849-02	Primary Tumor	CPTAC-3
+0e19745f-10c7-436f-a56b-f54cca5d7f3a	2a73af06-3e0e-48fa-89c0-5e16179d06dc.rna_seq.augmented_star_gene_counts.tsv	4226461	C3L-00994	C3L-00994-07	Solid Tissue Normal	CPTAC-3
+a01e0813-6bb1-44dd-8c39-69e2fc8b504a	6e0988c8-ccf5-4211-892d-8b9ff75d2d6d.rna_seq.augmented_star_gene_counts.tsv	4231460	C3L-04844	C3L-04844-01	Primary Tumor	CPTAC-3
+82cc06b3-d97f-48e1-bc4f-67d0b9d73de2	853d0733-e6bb-4eba-85d1-1409e99a5992.rna_seq.augmented_star_gene_counts.tsv	4158910	C3N-03619	C3N-03619-12	Primary Tumor	CPTAC-3
+eb584d61-f55f-4ab8-8207-06a305ea3fa1	f473711e-580d-447b-b93a-13040db5fc14.rna_seq.augmented_star_gene_counts.tsv	4224929	C3N-01752	C3N-01752-02	Primary Tumor	CPTAC-3
+a5591247-e4a4-4929-a57b-879c691bf496	05c9a203-2a2f-4767-8190-49cf18826b84.rna_seq.augmented_star_gene_counts.tsv	4223662	C3N-01754	C3N-01754-03	Primary Tumor	CPTAC-3
+910baa78-f397-4251-86c3-be925f4dc26e	862dc37a-950a-4147-9728-17b57730ef2e.rna_seq.augmented_star_gene_counts.tsv	4229659	C3N-01946	C3N-01946-01	Primary Tumor	CPTAC-3
+8a9cb984-dc1d-4aac-b064-f6b3d0fa9476	ea958d87-580b-41bd-b884-4b929f4ba279.rna_seq.augmented_star_gene_counts.tsv	4235894	C3N-00828	C3N-00828-04	Primary Tumor	CPTAC-3
+4fd8e51c-1614-44b9-b422-7a930e34cce5	45179b96-953a-41bb-b711-7a3f8d1a11cc.rna_seq.augmented_star_gene_counts.tsv	4237795	C3N-01337	C3N-01337-14	Primary Tumor	CPTAC-3
+047e3e23-4009-4d3c-b84c-1f89e8f808ce	c813fdd1-fd38-47fe-82da-ab6059afb141.rna_seq.augmented_star_gene_counts.tsv	4226691	C3N-00306	C3N-00306-05	Solid Tissue Normal	CPTAC-3
+450e8ec2-072a-4c2b-bf80-7acf801e1db3	6479d38a-bbdf-4812-b18e-87aa8fe637fe.rna_seq.augmented_star_gene_counts.tsv	4226338	C3N-02713	C3N-02713-06	Solid Tissue Normal	CPTAC-3
+bab7dd73-1ba3-4502-a748-71f08eed8a96	eb61fafa-57ca-4387-b26a-ce832e1ea95c.rna_seq.augmented_star_gene_counts.tsv	4238544	C3N-01645	C3N-01645-05	Solid Tissue Normal	CPTAC-3
+3af221f8-2d6c-4594-add5-6f59fc6cb978	b587bc80-4fbe-4eb5-8dbf-a7039cbca81c.rna_seq.augmented_star_gene_counts.tsv	4227346	C3N-00307	C3N-00307-05	Solid Tissue Normal	CPTAC-3
+6d2f6005-bbdb-424c-91ab-4f0aa4b7fc3d	8f20dc73-e3c2-41d2-9a5a-35d8d9b6a788.rna_seq.augmented_star_gene_counts.tsv	4223128	C3N-00498	C3N-00498-05	Solid Tissue Normal	CPTAC-3

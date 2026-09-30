@@ -1,18 +1,12 @@
-# Raw and processed data: public but large, download separately (see README)
-data/raw/
-data/processed/
-
-# Pipeline outputs
+# downloaded and generated data
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
 results/
-manuscript/
 
 # Python
 __pycache__/
-*.py[cod]
+*.pyc
 .venv/
-venv/
 .ipynb_checkpoints/
-
-# OS
-.DS_Store
-Thumbs.db

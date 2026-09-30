@@ -1,20 +1,22 @@
-# Versions used for the 9 Sep 2026 rerun (Python 3.11). scikit-learn >= 1.8 is required
-# for the elastic-net penalty semantics; python-igraph is required for stage 06.
+# Python 3.11
 numpy==2.4.4
 pandas==2.3.3
 scipy==1.17.1
 scikit-learn==1.8.0
+statsmodels==0.15.0
+lifelines==0.30.3
 scanpy==1.11.5
 anndata==0.12.19
+h5py==3.16.0
+umap-learn==0.5.12
+python-igraph==1.0.0
+networkx==3.6.1
+dynamicTreeCut
+lightgbm==4.7.0
+liana==1.10.0
+matplotlib==3.10.9
+adjustText==1.4.0
+openpyxl==3.1.5
 pyyaml==6.0.3
 joblib==1.5.3
-networkx==3.6.1
-python-igraph==1.0.0
-matplotlib==3.10.9
-statsmodels==0.15.0
-openpyxl==3.1.5
-lifelines==0.30.3
-dynamicTreeCut
-h5py==3.16.0
-adjustText==1.4.0
-lightgbm==4.7.0   # optional, only for scripts/02_multinomial_pemt_model/05_benchmark_classifiers.py
+requests==2.34.2

@@ -1,72 +1,113 @@
 # pemt-hnscc
 
-Code for "Partial EMT in bulk head and neck cancer resolves into a prognostic stromal programme and a tumour-intrinsic EGFR-driven state".
+Analysis code for the article "Malignant and stromal partial EMT programmes and cetuximab outcome in
+head and neck cancer" (Alkhatib et al., npj Precision Oncology).
 
-The pipeline trains a three-class classifier on single-cell HNSCC pseudobulks, projects it into four bulk cohorts, and runs the co-expression, survival, network and perturbation analyses in the paper. Running it end to end reproduces every figure and supplementary table.
+The partial EMT (pEMT) gene list of Puram et al. (2017) is divided by the cell type that expresses
+each gene in single-cell data. A classifier trained on single-cell pseudobulks scores the malignant
+pEMT state in bulk tumours. Both parts of the gene list are then tested against survival in four
+bulk cohorts and against outcome under cetuximab in patients and patient-derived xenografts. The
+scripts in `src/` produce every figure and supplementary table of the article.
 
-## Requirements
+## Repository layout
 
-Python 3.11.
-
+```text
+config/                   parameters, random seeds, gene signatures, dataset registry
+data/
+  README.md               where to download every input
+  references/             small public reference files used by the code (committed)
+  raw/                    downloaded inputs (not committed)
+  processed/              intermediate files written by the code (not committed)
+src/
+  pemt/                   shared functions: configuration, plotting style, survival helpers,
+                          MLR-EMT, Firth logistic regression, published gene sets
+  00_setup/               input check
+  01_single_cell_qc/      import and quality control of the single-cell datasets
+  02_multinomial_pemt_model/  training labels, pseudobulk mixtures, elastic-net classifier
+  03_sc_classifier_validation/  classifier in the single-cell datasets, label-free recovery
+  04_tcga_projection/     bulk cohorts: projection, EMT score panel, survival, meta-analysis
+  05_wgcna/               co-expression network of TCGA-HNSC
+  06_network_analysis/    network proximity and LINCS signature reversal
+  07_depmap_broad_prism_validation/  cell-line drug sensitivity and CRISPR dependency
+  09_gene_partition/      partition of the pEMT gene list by cell type and its replication
+  10_cetuximab/           cetuximab-treated patients, xenografts and cell lines, MLR-EMT states
+  11_composition_and_mechanism/  composition simulation, proteome, ligand-receptor analysis
+  12_figures_and_tables/  combined figures and the supplementary workbook
+run_all.sh, run_all.ps1   run every stage in order
 ```
+
+`results/` is created when the code runs. Figures are written to `results/figures/` under the
+names used in the article (for example `Figure_6.png` and `Supplementary_Figure_8.png`), and the
+supplementary tables to `results/tables/Supplementary_Data_1.xlsx`.
+
+## Installation
+
+Python 3.11 is required.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate        # on Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-`lifelines` and `dynamicTreeCut` sometimes fail to build a wheel. If they do, `pip install --no-deps lifelines` and copy `dynamicTreeCut` from source into site-packages.
-
 ## Data
 
-Raw data is not in this repository. It is public but large, about 3.7 GB, and the DepMap CRISPR gene effect file alone is 429 MB. Download it into `data/raw/` before running anything. `DATA_DOWNLOAD_CHECKLIST.md` lists every file and its expected path, and `python scripts/00_setup/00_check_inputs.py` reports what is present.
-
-| Source | What to download | Where it goes |
-| --- | --- | --- |
-| GDC | TCGA-HNSC STAR counts and TPM, clinical, survival | `data/raw/tcga_hnsc/` |
-| GDC | CPTAC-3 HNSCC RNA-seq and clinical | `data/raw/external_cohorts/cptac/` |
-| GEO | GSE41613 and GSE65858 series matrices, GPL570 and GPL10558 annotations | `data/raw/external_cohorts/` |
-| TISCH2 | The six single-cell datasets listed in `config/dataset_registry.tsv` | `data/raw/single_cell/` |
-| DepMap 24Q4 | Expression, Model.csv, CRISPRGeneEffect.csv | `data/raw/depmap/` |
-| PRISM | Secondary screen dose-response curves | `data/raw/prism_broad/` |
-| STRING v11 | Physical links, protein-to-gene map | `data/raw/networks/` |
-| DrugBank | Drug and target exports (licence required) | `data/raw/drug_targets/drugbank/` |
-
-The published gene lists, the human interactome edge list and the TCGA subtype calls are small enough to include and are in `data/references/`.
+All inputs are public except the DrugBank export, which requires a DrugBank licence.
+`data/README.md` lists every file, its source and the path it must be saved under.
+`python src/00_setup/00_check_inputs.py` reports which inputs are present.
 
 ## Running
 
-```
-bash run_pipeline.sh          # Linux, macOS, WSL
-.\run_pipeline.ps1            # Windows
-```
-
-That runs stages 03 to 08. Expect about an hour and a half; the slow steps are drug proximity, which takes roughly ten minutes and runs twice, and the WGCNA correlation matrix. `RERUN_TRAINING=1` also reruns stages 00 to 02, which retrains the classifier and needs another 40 minutes.
-
-Stage 06-05 needs internet access for the LINCS API. Everything else runs offline once the data is downloaded.
-
-## Layout
-
-```
-scripts/00_setup                     input check
-scripts/01_single_cell_qc            quality control and programme scoring
-scripts/02_multinomial_pemt_model    training labels, pseudobulks, classifier
-scripts/03_sc_classifier_validation  held-out single-cell validation
-scripts/04_tcga_projection           bulk projection, EMT scores, survival, validation
-scripts/05_wgcna                     co-expression network
-scripts/06_network_analysis          drug proximity, LINCS reversal
-scripts/07_depmap_broad_prism_validation   cell line sensitivity and dependency
-scripts/08_manuscript_tables         supplementary tables and assembled figures
-scripts/_lib                         shared helpers
-config/config.yaml                   every parameter and random seed
-data/references/                     small published gene lists
+```bash
+bash run_all.sh                  # on Windows: .\run_all.ps1
 ```
 
-Every script has a docstring saying what it does, what it reads and what it writes. Figures are written to `manuscript/figures/` and the supplementary workbook to `manuscript/tables/`, both created on the first run. Each `save_figure` call writes the figure's final name in the paper; intermediate panels that are later assembled into a combined figure are written as `panel_*`.
+The scripts run in the order listed in `run_all.sh`. Each script can also be run on its own once
+the outputs it reads exist, for example:
 
-## Notes
+```bash
+python src/10_cetuximab/01_cetuximab_cohort.py
+```
 
-Classifier probabilities are cohort-relative, because projection z-scores the classifier genes within each cohort. Absolute proportions are not interpretable and the score cannot be computed for a single sample without a reference cohort.
+Three scripts need network access. `src/04_tcga_projection/00_prepare_cptac_rnaseq.py` downloads the
+CPTAC-3 RNA-seq files from the GDC, and `src/06_network_analysis/05_lincs_signature_reversal.py` and
+`src/11_composition_and_mechanism/05_lincs_random_controls.py` query the SigCom LINCS API. All
+parameters and random seeds are in `config/config.yaml`.
 
-Two analyses were run and then dropped, and the code for both is still here. A betweenness-based key-protein construct proved unstable to the choice of STRING evidence channel; it is gated behind `RUN_SUBNETWORK=1` and its output is Supplementary Table S9. A mechanism-of-action enrichment test used a null that treats compounds screened on the same cell lines as independent; `scripts/_lib/permtest.py` has the permutation test that replaced it.
+## Figures and tables
+
+| Item | Script |
+|---|---|
+| Figure 1 | `src/12_figures_and_tables/03_figure1_study_overview.py` |
+| Figure 2 | `src/09_gene_partition/01_pemt_gene_partition.py` |
+| Figure 3 | `src/03_sc_classifier_validation/03_validation_figure.py` |
+| Figure 4 | `src/12_figures_and_tables/04_figure4_survival_and_scores.py` |
+| Figure 5 | `src/04_tcga_projection/10_independent_validation.py` |
+| Figure 6, Supplementary Fig. 8 | `src/10_cetuximab/01_cetuximab_cohort.py` |
+| Figure 7 | `src/11_composition_and_mechanism/02_cptac_proteome_phospho.py` |
+| Supplementary Fig. 1 | `src/09_gene_partition/03_tyler_tirosh_benchmark.py` |
+| Supplementary Fig. 2 | `src/05_wgcna/02_run_wgcna.py` |
+| Supplementary Fig. 3 | `src/05_wgcna/03_module_trait_correlations.py` |
+| Supplementary Figs. 4 and 5 | `src/03_sc_classifier_validation/04_umap_figure.py` |
+| Supplementary Fig. 6 | `src/02_multinomial_pemt_model/05_benchmark_classifiers.py` |
+| Supplementary Fig. 7 | `src/03_sc_classifier_validation/05_label_free_embedding.py` |
+| Supplementary Fig. 9 | `src/11_composition_and_mechanism/03_caf_tumour_ligand_receptor.py` |
+| Supplementary Fig. 10 | `src/04_tcga_projection/09_external_cohorts.py` |
+| Supplementary Figs. 11 and 15 | `src/12_figures_and_tables/02_combined_figures.py` |
+| Supplementary Fig. 12 | `src/04_tcga_projection/11_subgroup_analysis.py` |
+| Supplementary Fig. 13 | `src/06_network_analysis/05_lincs_signature_reversal.py` |
+| Supplementary Fig. 14 | `src/07_depmap_broad_prism_validation/05_moa_permutation_test.py` |
+| Supplementary Figs. 16 and 17 | `src/06_network_analysis/04_network_figures.py` |
+| Supplementary Fig. 18 | `src/04_tcga_projection/08_clinical_associations.py` |
+| Supplementary Tables S1 to S49 | `src/12_figures_and_tables/01_build_supplementary_tables.py`, `05_extend_supplementary_tables.py` and `06_number_supplementary_tables.py` |
+
+## Citation
+
+Alkhatib DZR, Lunetto S, Chakraborty P, Jolly MK, Philpott M, Biddle A, Youssef G, Han N. Malignant
+and stromal partial EMT programmes and cetuximab outcome in head and neck cancer. npj Precision
+Oncology (in submission).
 
 ## Licence
 
-MIT. See LICENSE.
+The code is released under the MIT licence (see `LICENSE`). The reference files in
+`data/references/` keep the terms of their sources, which are listed in `data/README.md`.

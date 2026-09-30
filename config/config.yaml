@@ -1,4 +1,4 @@
-project_name: hnscc_pemt_multinomial_pipeline_v4
+project_name: hnscc_pemt
 random_seed: 42
 
 # Single-cell QC and signature scoring (stage 01)
@@ -120,8 +120,8 @@ network_analysis:
   centrality_p_threshold: 0.01
   permutation_seed: 20260909
   key_protein_fdr: 0.05
-  key_metrics: [betweenness]   # centralities that define a key protein; eigenvector and pagerank are reported but not used (their degree-preserving null has near-zero variance, so z-scores are inflated)
-  disease_set: seeds            # seeds = the module genes themselves (Guney 2016 design, recommended); key_proteins = betweenness-selected nodes of the STRING shortest-path subnetwork (unstable to the network choice, kept for comparison)
+  key_metrics: [betweenness]   # centralities that define a key protein. Eigenvector and PageRank are reported but not used, because their degree-preserving null has near-zero variance and their z-scores are inflated.
+  disease_set: seeds            # seeds: the seed genes themselves (Guney et al. 2016 design). key_proteins: betweenness-selected nodes of the STRING shortest-path subnetwork, unstable to the network choice and available for comparison.
   proximity_z_threshold: -1.96
   proximity_min_bin_size: 100
   proximity_seed: 452456
@@ -138,7 +138,7 @@ paths:
   references_dir: data/references
   results_dir: results
 
-# LINCS L1000 signature reversal (stage 06-05)
+# LINCS L1000 signature reversal (stage 06 step 05)
 lincs:
   n_signature_genes: 150      # top classifier coefficients per direction
   result_limit: 2000          # signatures returned per direction by the SigCom enrichment API
