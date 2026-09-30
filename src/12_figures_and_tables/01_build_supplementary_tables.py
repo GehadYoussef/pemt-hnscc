@@ -244,7 +244,7 @@ def build() -> list[tuple[str, str, pd.DataFrame]]:
          "one in which pEMT specificity is null. Stratifying does not recover an effect."),
         ("S20_gse65858_subtype", "gse65858_consensus_subtype.tsv",
          "Each score by the consensus expression clusters GSE65858 publishes for itself. These clusters share their names with the TCGA four-class calls "
-         "but were derived de novo within that cohort, and the externally defined Zhou cetuximab-PFS predictor set peaks in a different class here than in "
+         "but were derived de novo within that cohort, and the externally defined Zhou cetuximab-PFS gene set peaks in a different class here than in "
          "TCGA."),
     ):
         if (T / fname).exists():

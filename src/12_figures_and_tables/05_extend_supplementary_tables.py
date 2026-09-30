@@ -87,7 +87,7 @@ NEW = [
      "group, rank-biserial correlation, one- and two-sided Mann-Whitney p values with Benjamini-Hochberg "
      "q values, bootstrap ROC AUC, and maximum-likelihood odds ratios per standard deviation unadjusted "
      "and adjusted (Firth estimates are in S38). MLR-EMT is the faithful implementation of George et al. "
-     "The Zhou nine-gene predictor is flagged as not independent of this cohort and excluded from the FDR."),
+     "The Zhou nine-gene set is flagged as not independent of this cohort and excluded from the FDR."),
     ("S32_GSE65021_headtohead", "cetuximab_cohort/GSE65021_headtohead.tsv",
      "Head-to-head logistic models in GSE65021 entering pEMT specificity and one other score together, "
      "unadjusted and adjusted, with the correlation between the two scores in this cohort."),
@@ -169,7 +169,7 @@ NEW = [
      "within-cohort score."),
     ("S42_GSE65021_paired_auc", "cetuximab_cohort/GSE65021_sensitivity_paired_auc.tsv",
      "Paired bootstrap comparison (2,000 resamples) of the AUC of each primary measure with 76GS, Puram "
-     "epithelial differentiation, the canonical Puram pEMT signature and the Zhou nine-gene predictor."),
+     "epithelial differentiation, the canonical Puram pEMT signature and the Zhou nine-gene set."),
     ("S43_mlr_emt_states", "cetuximab_cohort/GSE65021_sensitivity_mlr_states.tsv",
      "MLR-EMT read as a three-state model. For GSE65021 and TCGA-HNSC, the range of each state probability "
      "and of the score. For GSE65021, the AUC for prolonged progression-free survival, two-sided Mann-Whitney "

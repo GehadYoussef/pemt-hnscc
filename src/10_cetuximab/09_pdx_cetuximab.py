@@ -17,7 +17,7 @@ because the human fibroblasts that express it are absent.
 
 Scores, all standardised within each panel as in every other cohort: pEMT specificity (trained
 classifier), the malignant and stromal cores and total-share arms, the malignant consensus arm, the
-Puram pEMT signature, Puram epithelial differentiation, 76GS, and the Zhou nine-gene predictor. The
+Puram pEMT signature, Puram epithelial differentiation, 76GS, and the Zhou nine-gene set. The
 Zhou predictor was derived on GSE65021, and Zhou and colleagues also examined GSE84713, so it is not
 independent of that panel. Each score is tested by two-sided Mann-Whitney p, bootstrap AUC and Firth
 odds ratio per SD. In GSE84713 the two pairs of models from one patient (11269A/B, 11437A/B) are

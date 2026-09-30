@@ -5,7 +5,7 @@ These analyses were added post hoc, after the primary results of 01_cetuximab_co
 
 1. Paired comparison. Paired bootstrap (2,000 resamples of patients) of the AUC difference between
    each primary measure (the classifier axis, pEMT specificity, and the malignant core) and 76GS,
-   Puram epithelial differentiation, the Puram pEMT signature and the Zhou nine-gene predictor.
+   Puram epithelial differentiation, the Puram pEMT signature and the Zhou nine-gene set.
    The bootstrap p-value is twice the smaller tail proportion of the differences.
 2. Multiplicity. Benjamini-Hochberg over one family: every independently derived score from
    01_cetuximab_cohort.py plus the four arm scores specified before the cohort was examined
