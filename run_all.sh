@@ -29,11 +29,11 @@ python src/04_tcga_projection/06_survival_analysis.py
 python src/04_tcga_projection/07_emt_score_panel.py
 python src/04_tcga_projection/08_clinical_associations.py
 python src/04_tcga_projection/09_external_cohorts.py
+python src/04_tcga_projection/12_cptac_validation.py
 python src/04_tcga_projection/10_independent_validation.py
 python src/04_tcga_projection/11_subgroup_analysis.py
-python src/04_tcga_projection/12_cptac_validation.py
-python src/04_tcga_projection/13_survival_meta_analysis.py
 python src/04_tcga_projection/14_survival_sensitivity.py
+python src/04_tcga_projection/13_survival_meta_analysis.py
 python src/05_wgcna/01_prepare_wgcna_expression.py
 python src/05_wgcna/02_run_wgcna.py
 python src/05_wgcna/03_module_trait_correlations.py
@@ -71,6 +71,11 @@ python src/11_composition_and_mechanism/02_cptac_proteome_phospho.py
 python src/11_composition_and_mechanism/03_caf_tumour_ligand_receptor.py
 python src/11_composition_and_mechanism/04_malignant_arm_proximity.py
 python src/11_composition_and_mechanism/05_lincs_random_controls.py
+python src/13_revision/01_hartung_knapp_meta.py
+python src/13_revision/02_core_vs_canonical.py
+python src/13_revision/03_basal_centroid.py
+python src/13_revision/04_saturation_logodds.py
+python src/13_revision/05_gavish_meta_programmes.py
 python src/12_figures_and_tables/01_build_supplementary_tables.py
 python src/12_figures_and_tables/02_combined_figures.py
 python src/12_figures_and_tables/03_figure1_study_overview.py

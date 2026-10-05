@@ -348,7 +348,7 @@ def figure(corr, genes_df, scores, subtypes, pub_cols):
     axD.set_ylabel("Spearman \u03c1 with pEMT specificity", fontsize=6.8)
     axD.set_ylim(0, 1.0)
     axD.legend(fontsize=5.5, frameon=False, loc="upper left", ncol=4, handlelength=1.0, columnspacing=0.9, borderaxespad=0.2)
-    axD.set_title("Replication in three external cohorts", fontsize=7, color=PALETTE["grey"])
+    axD.set_title("Replication in four cohorts", fontsize=7, color=PALETTE["grey"])
     axD.text(-0.22, 1.10, "c", transform=axD.transAxes, fontweight="bold", fontsize=8)
 
     save_figure(fig, FIG, "Figure_5")

@@ -33,6 +33,7 @@ src/
   10_cetuximab/           cetuximab-treated patients, xenografts and cell lines, MLR-EMT states
   11_composition_and_mechanism/  composition simulation, proteome, ligand-receptor analysis
   12_figures_and_tables/  combined figures and the supplementary workbook
+  13_revision/            Hartung-Knapp pooling, Basal centroid, log-odds summary, Gavish meta-programmes
 run_all.sh, run_all.ps1   run every stage in order
 ```
 
@@ -69,10 +70,13 @@ the outputs it reads exist, for example:
 python src/10_cetuximab/01_cetuximab_cohort.py
 ```
 
-Three scripts need network access. `src/04_tcga_projection/00_prepare_cptac_rnaseq.py` downloads the
-CPTAC-3 RNA-seq files from the GDC, and `src/06_network_analysis/05_lincs_signature_reversal.py` and
-`src/11_composition_and_mechanism/05_lincs_random_controls.py` query the SigCom LINCS API. All
-parameters and random seeds are in `config/config.yaml`.
+Five scripts need network access. `src/04_tcga_projection/00_prepare_cptac_rnaseq.py` downloads the
+CPTAC-3 RNA-seq files from the GDC, `src/06_network_analysis/05_lincs_signature_reversal.py` and
+`src/11_composition_and_mechanism/05_lincs_random_controls.py` query the SigCom LINCS API,
+`src/13_revision/03_basal_centroid.py` downloads the TCGA 2015 subtype centroids and classification
+matrix from the GDC, and `src/13_revision/05_gavish_meta_programmes.py` downloads Supplementary Table 2
+of Gavish et al. 2023. Each download is kept under `data/raw/` and reused. All parameters and random
+seeds are in `config/config.yaml`.
 
 ## Figures and tables
 
@@ -100,6 +104,11 @@ parameters and random seeds are in `config/config.yaml`.
 | Supplementary Figs. 16 and 17 | `src/06_network_analysis/04_network_figures.py` |
 | Supplementary Fig. 18 | `src/04_tcga_projection/08_clinical_associations.py` |
 | Supplementary Tables S1 to S49 | `src/12_figures_and_tables/01_build_supplementary_tables.py`, `05_extend_supplementary_tables.py` and `06_number_supplementary_tables.py` |
+| Hartung-Knapp pooling of the survival hazard ratios (`results/survival_meta_hk/`) | `src/13_revision/01_hartung_knapp_meta.py` |
+| Malignant core and pEMT specificity with the canonical signature in GSE65021 (`results/cetuximab_cohort/GSE65021_core_vs_canonical.tsv`) | `src/13_revision/02_core_vs_canonical.py` |
+| Basal centroid score in GSE65021 and TCGA-HNSC (`results/basal_centroid/`) | `src/13_revision/03_basal_centroid.py` |
+| Saturation and log-odds summaries of pEMT specificity (`results/specificity_saturation/`) | `src/13_revision/04_saturation_logodds.py` |
+| Gavish et al. 2023 meta-programmes and the Tyler and Tirosh availability record (`results/published_programmes/`) | `src/13_revision/05_gavish_meta_programmes.py` |
 
 ## Citation
 

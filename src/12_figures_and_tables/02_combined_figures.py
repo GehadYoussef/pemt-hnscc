@@ -22,7 +22,7 @@ deviation (mean +/- 1.96 SD), so the interval is a normal approximation to the e
 p-values used to mark classes are the empirical permutation p-values.
 
 Inputs:  results/tcga_projection/tcga_master_trait_table.tsv
-         results/tcga_projection/cox_multivariable.tsv
+         results/tcga_projection/cox_multivariable_M2.tsv
          results/tcga_projection/emt_score_panel_scores.tsv
          results/tcga_projection/survival_meta_analysis.tsv
          results/tcga_projection/survival_meta_inputs.tsv
@@ -104,14 +104,16 @@ def figure_tcga_cox():
     axr.tick_params(axis="y", length=0, pad=16)
 
     axf = fig.add_subplot(gs[:, 1])
-    cox = pd.read_csv(TC / "cox_multivariable.tsv", sep="\t")
+    # The adjusted model M2 of 04_tcga_projection/06_survival_analysis.py (stage, age, site, HPV)
+    cox = pd.read_csv(TC / "cox_multivariable_M2.tsv", sep="\t")
     # drop covariates the model could not estimate (a site level with too few events gives HR 0 and an
     # infinite upper bound)
     cox = cox[np.isfinite(cox["HR"]) & np.isfinite(cox["HR_up_95"]) & (cox["HR"] > 0)]
     pretty = {"pEMT_specificity": "pEMT specificity", "stage_num": "Pathological stage", "age": "Age",
               "pack_years": "Pack-years", "hpv_positive": "HPV positive",
               "site_group_oral_cavity": "Oral cavity", "site_group_oropharynx": "Oropharynx",
-              "site_group_larynx_hypopharynx": "Larynx / hypopharynx", "site_group_other": "Other site"}
+              "site_group_larynx_hypopharynx": "Larynx / hypopharynx", "site_group_other": "Other site",
+              "site_oral_cavity": "Oral cavity", "site_larynx_hypopharynx": "Larynx / hypopharynx"}
     cox["label"] = cox["covariate"].map(lambda c: pretty.get(c, c.replace("_", " ")))
     cox = cox.iloc[::-1]
     y = np.arange(len(cox))

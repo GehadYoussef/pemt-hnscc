@@ -17,10 +17,21 @@ correlation between the elastic-net P(pEMT-high) and each other model's P(pEMT-h
 fold (the TCGA and DepMap analyses use ranks). Supplementary_Figure_6 shows accuracy, AUROC for
 pEMT-high, log loss and this Spearman correlation (panels a to d).
 
+Deployment-matched evaluation. In the evaluation above the held-out dataset
+is standardised with the training fold's scaler, but every bulk cohort is standardised within itself
+before the coefficients are applied. Each learner is therefore also evaluated with the held-out
+dataset z-scored gene-wise within itself (pandas mean and standard deviation, zero standard deviation
+replaced by 1, as in 04_tcga_projection/03_project_classifier_to_tcga.py). For the two linear models
+only the fitted logistic layer is applied to the within-fold z-scores, exactly as bulk cohorts are
+scored. The tree models have no scaler, so for them the deployment-matched model is refitted on the
+training fold standardised with its own scaler and applied to the within-fold z-scores.
+
 Inputs:  data/processed/pseudo_bulk/pseudobulk_expression.tsv,
          data/processed/pseudo_bulk/pseudobulk_metadata.tsv
 Outputs: results/multinomial_classifier/classifier_benchmark_folds.tsv,
          results/multinomial_classifier/classifier_benchmark_summary.tsv,
+         results/multinomial_classifier/classifier_benchmark_folds_deployment.tsv,
+         results/multinomial_classifier/classifier_benchmark_summary_deployment.tsv,
          results/figures/Supplementary_Figure_6.svg and .png
 Usage:   python src/02_multinomial_pemt_model/05_benchmark_classifiers.py
 """
@@ -33,6 +44,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr
+from sklearn.base import clone
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, log_loss, roc_auc_score
@@ -75,6 +87,34 @@ def models(n_features: int) -> dict:
     return out
 
 
+def zscore_within(X: pd.DataFrame) -> pd.DataFrame:
+    """Gene-wise z-score of a held-out dataset within itself, as bulk cohorts are standardised."""
+    return ((X - X.mean()) / X.std().replace(0, 1.0)).fillna(0.0)
+
+
+def deployment_probs(mdl, Xtr: pd.DataFrame, ytr: pd.Series, Xte: pd.DataFrame) -> tuple[np.ndarray, list]:
+    """Class probabilities for the held-out fold standardised within itself."""
+    Zte = zscore_within(Xte)
+    if isinstance(mdl, Pipeline):
+        clf = mdl.named_steps["clf"]
+        return clf.predict_proba(Zte.values), list(clf.classes_)
+    scaler = StandardScaler().fit(Xtr)
+    Ztr = pd.DataFrame(scaler.transform(Xtr), index=Xtr.index, columns=Xtr.columns)
+    m2 = clone(mdl).fit(Ztr, ytr)
+    return m2.predict_proba(Zte), list(m2.classes_)
+
+
+def metric_row(name, fold, groups, te, y, P, classes, t0) -> dict:
+    pred = P.idxmax(axis=1)
+    row = {"model": name, "fold": fold, "held_out_dataset": groups.iloc[te].iloc[0], "n_test": len(te),
+           "fit_seconds": time.time() - t0,
+           "accuracy": accuracy_score(y.iloc[te], pred), "log_loss": log_loss(y.iloc[te], P.values, labels=classes),
+           "auroc_macro_ovr": roc_auc_score(y.iloc[te], P.values, multi_class="ovr", labels=classes, average="macro")}
+    for c in classes:
+        row[f"auroc_{c}"] = roc_auc_score((y.iloc[te] == c).astype(int), P[c])
+    return row
+
+
 def main() -> None:
     X = pd.read_csv(PB_DIR / "pseudobulk_expression.tsv", sep="\t", index_col=0)
     meta = pd.read_csv(PB_DIR / "pseudobulk_metadata.tsv", sep="\t", index_col=0).loc[X.index]
@@ -88,6 +128,7 @@ def main() -> None:
     cv = GroupKFold(n_splits=min(CLF["cv_n_splits"], groups.nunique()))
     folds = list(cv.split(X, y, groups))
     rows, ref_probs = [], {}
+    rows_dep, ref_probs_dep = [], {}
     for name, model in models(X.shape[1]).items():
         for fold, (tr, te) in enumerate(folds, 1):
             t0 = time.time()
@@ -117,12 +158,33 @@ def main() -> None:
             rows.append(row)
             print(f"  {name} fold {fold} ({row['held_out_dataset']}): acc {row['accuracy']:.3f}, macro AUROC {row['auroc_macro_ovr']:.3f}, "
                   f"AUROC pEMT {row['auroc_pEMT_high']:.3f}, {row['fit_seconds']:.0f} s")
+
+            # deployment-matched: held-out dataset standardised within itself
+            t1 = time.time()
+            pd_raw, cls_d = deployment_probs(mdl, Xtr, y.iloc[tr], Xte)
+            Pd = pd.DataFrame(pd_raw, index=Xte.index, columns=cls_d)[classes]
+            rd = metric_row(name, fold, groups, te, y, Pd, classes, t1)
+            rd["evaluation"] = "deployment-matched (held-out dataset z-scored within itself)"
+            if name == "elastic_net":
+                ref_probs_dep[fold] = Pd["pEMT_high"]
+            else:
+                rd["spearman_P_pEMT_high_vs_elastic_net"] = spearmanr(Pd["pEMT_high"], ref_probs_dep[fold].loc[Pd.index])[0]
+            rows_dep.append(rd)
+            print(f"    deployment-matched: acc {rd['accuracy']:.3f}, AUROC pEMT {rd['auroc_pEMT_high']:.3f}")
     res = pd.DataFrame(rows)
     res.to_csv(OUT_DIR / "classifier_benchmark_folds.tsv", sep="\t", index=False)
     num = [c for c in res.columns if c not in ("model", "fold", "held_out_dataset")]
     summ = res.groupby("model")[num].mean().reindex([m for m in ["elastic_net", "ridge", "random_forest", "lightgbm", "lightgbm_top2000"] if m in set(res["model"])])
     summ.to_csv(OUT_DIR / "classifier_benchmark_summary.tsv", sep="\t")
     print(summ.round(3).to_string())
+
+    dep = pd.DataFrame(rows_dep)
+    dep.to_csv(OUT_DIR / "classifier_benchmark_folds_deployment.tsv", sep="\t", index=False)
+    num_d = [c for c in dep.columns if c not in ("model", "fold", "held_out_dataset", "evaluation")]
+    summ_d = dep.groupby("model")[num_d].mean().reindex(list(summ.index))
+    summ_d.to_csv(OUT_DIR / "classifier_benchmark_summary_deployment.tsv", sep="\t")
+    print("Deployment-matched (held-out dataset z-scored within itself):")
+    print(summ_d.round(3).to_string())
 
     fig, axes = plt.subplots(1, 4, figsize=(mm(180), mm(58)))
     order = list(summ.index)

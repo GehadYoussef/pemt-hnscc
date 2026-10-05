@@ -5,8 +5,9 @@ One matplotlib figure, one gridspec and one run of panel letters:
   a     workflow strip, the five stages of the study
   b     single-cell datasets and their malignant and fibroblast content after QC
   c     composition of the labelled pseudobulk training set
-  d     held-out performance across five learners (leave-one-dataset-out AUROC if the benchmark
-        table is absent)
+  d     held-out performance across five learners, evaluated with the training fold's scaler (left)
+        and deployment-matched, with the held-out dataset z-scored within itself as bulk cohorts
+        are (right) (leave-one-dataset-out AUROC if the benchmark table is absent)
   e f g the 15 largest coefficients for each of the three classes
 
 The panels are drawn from saved result files. No analysis is rerun. The per-dataset cell counts in
@@ -19,6 +20,7 @@ Inputs:  config/dataset_registry.tsv
          data/processed/pseudo_bulk/pseudobulk_metadata.tsv
          results/multinomial_classifier/grouped_cv_performance.tsv
          results/multinomial_classifier/classifier_benchmark_folds.tsv
+         results/multinomial_classifier/classifier_benchmark_folds_deployment.tsv
          results/multinomial_classifier/classifier_coefficients.tsv
 Outputs: results/figures/Figure_1.svg and .png
 Usage:   python src/12_figures_and_tables/03_figure1_study_overview.py
@@ -54,9 +56,18 @@ STEPS = [   # (title, subtitle) for each stage of the workflow strip
     ("seven single-cell\ndatasets", "5,902 to 176,440 cells"),
     ("pEMT gene list\nresolved by cell type", "replicated in two datasets"),
     ("three-class\nclassifier", "trained on pseudobulks"),
-    ("four bulk cohorts", "864 tumours, 350 deaths"),
+    ("four bulk cohorts", None),   # tumours and deaths, read from the survival meta-analysis
     ("cetuximab-treated", "40 patients, 43 xenografts"),
 ]
+
+
+def survival_basis() -> str:
+    """Tumours and deaths pooled in the survival meta-analysis (04_tcga_projection/13)."""
+    f = RES / "tcga_projection" / "survival_meta_analysis.tsv"
+    if not f.exists():
+        return "survival meta-analysis"
+    m = pd.read_csv(f, sep="\t").set_index("score").loc["pEMT_specificity"]
+    return f"{int(m['total_n']):,} tumours, {int(m['total_events']):,} deaths"
 
 
 def workflow_strip(ax) -> None:
@@ -74,7 +85,8 @@ def workflow_strip(ax) -> None:
 
     xs = np.linspace(11.5, 88.5, len(STEPS))
     titles = []
-    for (title, sub), x in zip(STEPS, xs):
+    steps = [(t, survival_basis() if s is None else s) for t, s in STEPS]
+    for (title, sub), x in zip(steps, xs):
         titles.append(ax.text(x, Y_TITLE, title, fontsize=7.2, ha="center", va="center",
                               fontweight="bold", linespacing=1.5))
         ax.text(x, Y_SUB, sub, fontsize=6.2, ha="center", va="center", color=PALETTE["grey"])
@@ -169,32 +181,52 @@ def classifier_panels(fig, gs) -> list:
     ax.legend(loc="upper left", bbox_to_anchor=(-0.1, -0.28), ncol=1, fontsize=5.5, frameon=False)
     axes.append(ax)
 
-    # d: held-out performance
-    ax = fig.add_subplot(gs[0, 2])
+    # d: held-out performance. Left, the held-out dataset standardised with the training fold's
+    # scaler; right, deployment-matched, the held-out dataset z-scored within itself as every bulk
+    # cohort is. Both from 02_multinomial_pemt_model/05_benchmark_classifiers.py.
+    dep = RES / "multinomial_classifier" / "classifier_benchmark_folds_deployment.tsv"
+    dep = pd.read_csv(dep, sep="\t") if dep.exists() else None
     if bench is not None:
         models_ = [m for m in ["elastic_net", "ridge", "random_forest", "lightgbm",
                                "lightgbm_top2000"] if m in set(bench["model"])]
-        names = {"elastic_net": "elastic\nnet", "ridge": "ridge", "random_forest": "random\nforest",
-                 "lightgbm": "Light-\nGBM", "lightgbm_top2000": "LightGBM\ntop 2,000"}
-        for i, m in enumerate(models_):
-            sub = bench[bench["model"] == m]
-            for metric, marker, col in (("auroc_pEMT_high", "o", PALETTE["vermilion"]),
-                                        ("accuracy", "s", PALETTE["blue"])):
-                off = -0.12 if metric == "accuracy" else 0.12
-                ax.scatter([i + off] * len(sub), sub[metric], s=16, marker=marker,
-                           color=col, linewidths=0, zorder=2)
-                ax.plot([i + off - 0.1, i + off + 0.1], [sub[metric].mean()] * 2,
-                        color=PALETTE["black"], linewidth=0.8)
-        ax.set_xticks(range(len(models_)))
-        ax.set_xticklabels([names[m] for m in models_], fontsize=5.5)
-        ax.set_xlim(-0.5, len(models_) - 0.5)
-        ax.scatter([], [], marker="o", color=PALETTE["vermilion"], s=16,
-                   label="AUROC, pEMT-high vs rest")
-        ax.scatter([], [], marker="s", color=PALETTE["blue"], s=16, label="accuracy (argmax)")
-        ax.legend(loc="upper left", bbox_to_anchor=(0.0, -0.28), ncol=1, fontsize=5.5, frameon=False)
-        ax.set_ylim(0.25, 1.03)
-        ax.set_ylabel("Held-out dataset (2 folds)")
+        names = {"elastic_net": "elastic net", "ridge": "ridge", "random_forest": "random forest",
+                 "lightgbm": "LightGBM", "lightgbm_top2000": "LightGBM 2k"}
+        sets = [(bench, "training-fold scaler")]
+        if dep is not None:
+            sets.append((dep, "held-out z-scored\nwithin itself"))
+        sub_gs = gs[0, 2].subgridspec(1, len(sets), wspace=0.12)
+        ax0 = None
+        for k, (tab, title) in enumerate(sets):
+            ax = fig.add_subplot(sub_gs[0, k], sharey=ax0)
+            for i, m in enumerate(models_):
+                sub = tab[tab["model"] == m]
+                for metric, marker, col in (("auroc_pEMT_high", "o", PALETTE["vermilion"]),
+                                            ("accuracy", "s", PALETTE["blue"])):
+                    off = -0.14 if metric == "accuracy" else 0.14
+                    ax.scatter([i + off] * len(sub), sub[metric], s=10, marker=marker,
+                               color=col, linewidths=0, zorder=2)
+                    ax.plot([i + off - 0.12, i + off + 0.12], [sub[metric].mean()] * 2,
+                            color=PALETTE["black"], linewidth=0.8)
+            ax.set_xticks(range(len(models_)))
+            ax.set_xticklabels([names[m] for m in models_], fontsize=5.0, rotation=55, ha="right",
+                               rotation_mode="anchor")
+            ax.set_xlim(-0.5, len(models_) - 0.5)
+            ax.set_title(title, fontsize=5.5, color=PALETTE["grey"], pad=2)
+            if k == 0:
+                ax0 = ax
+                ax.set_ylim(0.25, 1.03)
+                ax.set_ylabel("Held-out dataset (2 folds)")
+                ax.scatter([], [], marker="o", color=PALETTE["vermilion"], s=16,
+                           label="AUROC, pEMT-high vs rest")
+                ax.scatter([], [], marker="s", color=PALETTE["blue"], s=16,
+                           label="accuracy (argmax)")
+                ax.legend(loc="upper left", bbox_to_anchor=(0.0, -0.28), ncol=1, fontsize=5.5,
+                          frameon=False)
+            else:
+                ax.tick_params(axis="y", labelleft=False)
+        ax = ax0
     else:
+        ax = fig.add_subplot(gs[0, 2])
         ax.bar([0, 1, 2], [cv["auc_pEMT_high"].mean(), cv["auc_epithelial_like"].mean(),
                            cv["auc_fibroblast_stromal_like"].mean()],
                color=[CLASS_COLOURS[k] for k, _ in CLS])

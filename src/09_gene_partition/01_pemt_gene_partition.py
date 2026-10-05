@@ -237,7 +237,10 @@ def main() -> None:
                     arrowprops=dict(arrowstyle="-", color=PALETTE["grey"], lw=0.4,
                                     shrinkA=0, shrinkB=1.5))
         last = ly
+    # The axis runs past 100 only to leave room for the gene labels. Ticks and spine stop at 100.
     ax.set_xlim(0, 122)
+    ax.set_xticks([0, 25, 50, 75, 100])
+    ax.spines["bottom"].set_bounds(0, 100)
     ax.set_xlabel("Malignant share of expression (%)")
     ax.set_ylabel("log$_2$ fold change,\npEMT-high vs epithelial-like")
     ax.legend(fontsize=6, loc="upper center", ncol=2, frameon=False, columnspacing=0.8,

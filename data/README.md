@@ -143,6 +143,27 @@ data/raw/networks/ReactomePathways.gmt
 STRING v11.0 (https://string-db.org), COMPARTMENTS (https://compartments.jensenlab.org), STITCH 5
 (http://stitch.embl.de) and Reactome (https://reactome.org).
 
+### Downloaded on first use by `src/13_revision/`
+
+`src/13_revision/03_basal_centroid.py` downloads two files from the GDC publication page of the TCGA
+HNSCC study (Cancer Genome Atlas Network, Nature 2015,
+https://gdc.cancer.gov/about-data/publications/hnsc_2014): the subtype centroids used for the published
+calls (classification_centroid_728genes.txt, https://api.gdc.cancer.gov/data/a6d6c614-90dd-4870-9daf-47ade3fad506)
+and the RNA-seq matrix that study classified (transformed_rnaseq_to_classify.txt,
+https://api.gdc.cancer.gov/data/1d4dc8c2-50e9-49b6-881f-346840034755, stored gzipped).
+
+`src/13_revision/05_gavish_meta_programmes.py` downloads Supplementary Table 2 of Gavish et al., Nature
+2023 (sheet "Cancer MPs", 41 cancer-cell meta-programmes,
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-023-06130-4/MediaObjects/41586_2023_6130_MOESM6_ESM.xlsx).
+Meta-programme genes are matched to current HGNC symbols through a table of previous symbols in the
+script.
+
+```text
+data/raw/tcga2015_subtype_centroids/classification_centroid_728genes.txt
+data/raw/tcga2015_subtype_centroids/transformed_rnaseq_to_classify.txt.gz
+data/raw/gavish2023/Gavish2023_SupplementaryTable2_MOESM6.xlsx
+```
+
 ### DrugBank (licence required)
 
 The DrugBank drug-target analysis needs an export of the DrugBank database made under a DrugBank

@@ -203,13 +203,14 @@ NEW = [
      "Per-line scores and cetuximab response for both cell-line panels."),
     ("S46_pseudobulk_construction_cv", "pseudobulk_sensitivity/cv_by_construction.tsv",
      "Leave-one-dataset-out cross-validation of the classifier for two constructions of the training "
-     "pseudobulks (mean of the cells' log-normalised profiles, as trained, and the bulk-like sum of linear "
-     "counts, renormalised and log-transformed), each evaluated with the training-fold scaler and with the "
-     "held-out fold standardised within itself, as bulk cohorts are scored."),
+     "pseudobulks (the bulk-like sum of linear counts, renormalised and log-transformed, as trained, and the "
+     "earlier mean of the cells' log-normalised profiles), each evaluated with the training-fold scaler and "
+     "with the held-out fold standardised within itself, as bulk cohorts are scored."),
     ("S46b_pseudobulk_construction", "pseudobulk_sensitivity/summed_construction_summary.tsv",
-     "Classifier refitted on the summed pseudobulks: overlap of its top 100 pEMT-high coefficients with the "
-     "published classifier, correlation of its pEMT specificity with the published score in TCGA-HNSC and "
-     "GSE65021, and its AUC for prolonged progression-free survival in GSE65021."),
+     "Classifier refitted on the mean-of-log pseudobulks (earlier construction, same cells): overlap of its "
+     "top 100 pEMT-high coefficients with the main (summed) classifier, correlation of its pEMT specificity "
+     "with the main score in TCGA-HNSC and GSE65021, and its AUC for prolonged progression-free survival in "
+     "GSE65021 beside the main classifier's."),
     ("S47_composition_simulation", "composition_simulation/composition_regression.tsv",
      "Simulated tumours built from GSE181919 cells: standardised regression of each score on the share of "
      "pEMT-high malignant cells (q), the fibroblast fraction (f) and the immune fraction (u), with the "

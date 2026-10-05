@@ -4,7 +4,7 @@ Panels, from the outputs of 02_apply_classifier_to_sc_datasets.py:
   a  class probabilities of every pseudobulk (at least 20 cells), by dataset and cell type
   b  P(pEMT-high) against the Puram pEMT signature, Puram malignant pseudobulks, with Spearman rho
   c  P(pEMT-high) of the Puram primary-site pseudobulks by nodal status (Puram et al. Table S1),
-     with the one-sided Mann-Whitney p
+     with the exact two-sided Mann-Whitney p
   d  matched lymph node versus primary, Puram patients
 
 Inputs:  results/sc_classifier_validation/pseudobulk_probabilities.tsv,
@@ -19,7 +19,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from scipy.stats import spearmanr
+from scipy.stats import mannwhitneyu, spearmanr
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from pemt import load_config, project_root  # noqa: E402
@@ -98,9 +98,9 @@ def main() -> None:
         ax.scatter(i + rng.uniform(-0.15, 0.15, len(d)), d, s=16, color=PALETTE["orange"], linewidths=0, zorder=2)
     ax.boxplot(groups, widths=0.45, showfliers=False, medianprops={"color": PALETTE["black"], "linewidth": 1.1}, zorder=1)
     ax.set_xticks([1, 2]); ax.set_xticklabels([f"N0\n(n = {len(groups[0])})", f"N+\n(n = {len(groups[1])})"])
-    nod = pd.read_csv(OUT / "puram_nodal_status_test.tsv", sep="\t")
-    pv = float(nod.loc[nod["metric"] == "P_pEMT_high", "p_one_sided"].iloc[0])
-    ax.text(0.5, 1.01, f"one-sided Mann-Whitney (N+ > N0) p = {pv:.2f}", transform=ax.transAxes, ha="center", va="bottom", fontsize=6, color=PALETTE["grey"])
+    # Exact two-sided test. The groups separate completely, in the direction opposite to Puram's report.
+    pv = mannwhitneyu(groups[1], groups[0], alternative="two-sided", method="exact").pvalue
+    ax.text(0.5, 1.01, f"exact two-sided Mann-Whitney p = {pv:.3f}", transform=ax.transAxes, ha="center", va="bottom", fontsize=6, color=PALETTE["grey"])
     ax.set_ylabel("P(pEMT-high), primary site")
     ax.set_ylim(-0.03, 1.03)
     ax.set_title("c", loc="left", fontweight="bold")

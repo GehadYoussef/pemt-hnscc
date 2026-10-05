@@ -49,6 +49,13 @@ def build() -> list[tuple[str, str, pd.DataFrame]]:
         tables.append(("S1_classifier_benchmark", "Alternative classifiers on the identical pseudobulk training set and leave-one-dataset-out folds: accuracy, AUROC per class, "
                        "log loss, and Spearman correlation of each model's P(pEMT-high) with the elastic net on the held-out fold.", tsv(b)))
         tables.append(("S1b_classifier_benchmark_mean", "Fold means of S1_classifier_benchmark.", tsv(RES / "multinomial_classifier" / "classifier_benchmark_summary.tsv")))
+    bd = RES / "multinomial_classifier" / "classifier_benchmark_folds_deployment.tsv"
+    if bd.exists():
+        tables.append(("S1c_benchmark_deployment", "Deployment-matched evaluation of the same learners on the same folds: the held-out dataset is z-scored gene-wise within "
+                       "itself, as every bulk cohort is, and for the linear models only the fitted logistic layer is applied (tree models are refitted on the "
+                       "training fold standardised with its own scaler). Columns as in S1_classifier_benchmark.", tsv(bd)))
+        tables.append(("S1d_benchmark_deployment_mean", "Fold means of S1c_benchmark_deployment.",
+                       tsv(RES / "multinomial_classifier" / "classifier_benchmark_summary_deployment.tsv")))
 
     # Single-cell validation
     pb = tsv(RES / "sc_classifier_validation" / "pseudobulk_probabilities.tsv", index_col=0)
