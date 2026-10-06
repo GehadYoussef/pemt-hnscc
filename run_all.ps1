@@ -88,3 +88,23 @@ foreach ($s in $steps) {
     python @($s -split ' ')
     if ($LASTEXITCODE -ne 0) { throw "failed: $s" }
 }
+
+# Optional final stage: BayesPrism deconvolution with GSE181919 as the reference (src/13_revision/06 and 07).
+# It needs R with BayesPrism (see README.md), and the TCGA-HNSC run takes about five hours on about 20 cores.
+# R writes progress and warnings to stderr, so native errors do not stop the script here and the exit codes are checked instead.
+$ErrorActionPreference = "Continue"
+$hasBayesPrism = $false
+if (Get-Command Rscript -ErrorAction SilentlyContinue) {
+    & Rscript -e 'quit(status = as.integer(!suppressWarnings(suppressMessages(requireNamespace(''BayesPrism'', quietly = TRUE)))))' 2>$null | Out-Null
+    $hasBayesPrism = ($LASTEXITCODE -eq 0)
+}
+if ($hasBayesPrism) {
+    Write-Host "Rscript src/13_revision/06_bayesprism_deconvolution.R"
+    & Rscript src/13_revision/06_bayesprism_deconvolution.R
+    if ($LASTEXITCODE -ne 0) { throw "failed: src/13_revision/06_bayesprism_deconvolution.R" }
+    Write-Host "python src/13_revision/07_bayesprism_analysis.py"
+    python src/13_revision/07_bayesprism_analysis.py
+    if ($LASTEXITCODE -ne 0) { throw "failed: src/13_revision/07_bayesprism_analysis.py" }
+} else {
+    Write-Host "Skipping the optional BayesPrism stage (src/13_revision/06 and 07). Rscript or the R package BayesPrism was not found. README.md lists the R dependencies."
+}

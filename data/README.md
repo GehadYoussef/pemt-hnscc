@@ -45,6 +45,14 @@ data/raw/GSE181919/GSE181919_UMI_counts.txt.gz
 data/raw/GSE181919/GSE181919_Barcode_metadata.txt.gz
 ```
 
+GSE181919 (Choi et al., Nat Commun 2023) is also the single-cell reference of the optional BayesPrism
+stage (`src/13_revision/06_bayesprism_deconvolution.R`), which uses the UMI counts and the authors' cell
+annotation of the primary tumour and lymph-node cells. That stage needs R with the BayesPrism package
+from GitHub (https://github.com/Danko-Lab/BayesPrism), the CRAN packages data.table, Matrix, R.utils,
+snowfall, NMF, gplots and tidyestimate, and the Bioconductor packages scran and BiocParallel
+(installation in the main `README.md`). It reads no other new input. The TCGA-HNSC run takes about five
+hours on about 20 cores.
+
 ### TCGA-HNSC
 
 From the UCSC Xena GDC hub (STAR counts and TPM, clinical and survival tables) and the UCSC Xena

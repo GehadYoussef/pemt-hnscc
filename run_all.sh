@@ -82,3 +82,13 @@ python src/12_figures_and_tables/03_figure1_study_overview.py
 python src/12_figures_and_tables/04_figure4_survival_and_scores.py
 python src/12_figures_and_tables/05_extend_supplementary_tables.py
 python src/12_figures_and_tables/06_number_supplementary_tables.py
+
+# Optional final stage: BayesPrism deconvolution with GSE181919 as the reference (src/13_revision/06 and 07).
+# It needs R with BayesPrism (see README.md), and the TCGA-HNSC run takes about five hours on about 20 cores.
+if command -v Rscript >/dev/null 2>&1 &&
+    Rscript -e 'quit(status = as.integer(!suppressWarnings(suppressMessages(requireNamespace("BayesPrism", quietly = TRUE)))))' >/dev/null 2>&1; then
+    Rscript src/13_revision/06_bayesprism_deconvolution.R
+    python src/13_revision/07_bayesprism_analysis.py
+else
+    echo "Skipping the optional BayesPrism stage (src/13_revision/06 and 07). Rscript or the R package BayesPrism was not found. README.md lists the R dependencies."
+fi

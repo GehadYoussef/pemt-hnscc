@@ -39,6 +39,12 @@ by the earlier stages.
 - `05_gavish_meta_programmes.py` scores the 41 cancer meta-programmes of Gavish et al. 2023 in TCGA-HNSC
   and GSE65021 and records what Tyler and Tirosh 2021 deposited. It downloads Supplementary Table 2 of
   Gavish et al. and matches outdated gene symbols to current HGNC symbols.
+- `06_bayesprism_deconvolution.R` and `07_bayesprism_analysis.py` deconvolve TCGA-HNSC and GSE65021 with
+  BayesPrism, using GSE181919 as the single-cell reference, and compare the malignant-cell-specific
+  scores and the cell-type fractions with the bulk scores, the TCGA subtypes and outcome under
+  cetuximab. This stage is optional. It needs R with BayesPrism, the TCGA-HNSC run takes about five
+  hours on about 20 cores, and `run_all.sh` and `run_all.ps1` skip it with a message when Rscript or
+  BayesPrism is missing.
 
 ### Corrections
 

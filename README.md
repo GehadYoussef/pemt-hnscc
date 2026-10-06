@@ -33,7 +33,8 @@ src/
   10_cetuximab/           cetuximab-treated patients, xenografts and cell lines, MLR-EMT states
   11_composition_and_mechanism/  composition simulation, proteome, ligand-receptor analysis
   12_figures_and_tables/  combined figures and the supplementary workbook
-  13_revision/            Hartung-Knapp pooling, Basal centroid, log-odds summary, Gavish meta-programmes
+  13_revision/            Hartung-Knapp pooling, Basal centroid, log-odds summary, Gavish meta-programmes,
+                          BayesPrism deconvolution (optional, needs R)
 run_all.sh, run_all.ps1   run every stage in order
 ```
 
@@ -50,6 +51,22 @@ python -m venv .venv
 source .venv/bin/activate        # on Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
+The optional BayesPrism stage (`src/13_revision/06_bayesprism_deconvolution.R`) also needs R 4.4 and
+the R package BayesPrism, installed from GitHub (https://github.com/Danko-Lab/BayesPrism), with the CRAN
+packages data.table, Matrix, R.utils, snowfall, NMF, gplots and tidyestimate and the Bioconductor
+packages scran and BiocParallel:
+
+```r
+install.packages(c("remotes", "BiocManager", "data.table", "Matrix", "R.utils", "snowfall", "NMF",
+                   "gplots", "tidyestimate"))
+BiocManager::install(c("scran", "BiocParallel"))
+remotes::install_github("Danko-Lab/BayesPrism/BayesPrism")
+```
+
+The results in the article were produced with R 4.4.2, BayesPrism 2.2.3 (GitHub commit 1905205),
+scran 1.32.0, BiocParallel 1.38.0, NMF 0.28, snowfall 1.84-6.3, gplots 3.3.0, data.table 1.16.4,
+Matrix 1.7-1, R.utils 2.13.0 and tidyestimate 1.1.1.
 
 ## Data
 
@@ -77,6 +94,13 @@ CPTAC-3 RNA-seq files from the GDC, `src/06_network_analysis/05_lincs_signature_
 matrix from the GDC, and `src/13_revision/05_gavish_meta_programmes.py` downloads Supplementary Table 2
 of Gavish et al. 2023. Each download is kept under `data/raw/` and reused. All parameters and random
 seeds are in `config/config.yaml`.
+
+The last stage is optional. `src/13_revision/06_bayesprism_deconvolution.R` deconvolves TCGA-HNSC and
+GSE65021 with BayesPrism, using GSE181919 as the single-cell reference, and
+`src/13_revision/07_bayesprism_analysis.py` analyses the result. The TCGA-HNSC run takes about five
+hours on about 20 cores (set the number with `--cores=N`, default 18). `run_all.sh` and `run_all.ps1`
+run this stage only when `Rscript` and BayesPrism are installed, and otherwise print a message and skip
+it.
 
 ## Figures and tables
 
@@ -109,6 +133,7 @@ seeds are in `config/config.yaml`.
 | Basal centroid score in GSE65021 and TCGA-HNSC (`results/basal_centroid/`) | `src/13_revision/03_basal_centroid.py` |
 | Saturation and log-odds summaries of pEMT specificity (`results/specificity_saturation/`) | `src/13_revision/04_saturation_logodds.py` |
 | Gavish et al. 2023 meta-programmes and the Tyler and Tirosh availability record (`results/published_programmes/`) | `src/13_revision/05_gavish_meta_programmes.py` |
+| BayesPrism deconvolution of TCGA-HNSC and GSE65021 with GSE181919 as the reference (`results/bayesprism/`) | `src/13_revision/06_bayesprism_deconvolution.R` and `07_bayesprism_analysis.py` |
 
 ## Citation
 
