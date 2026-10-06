@@ -34,7 +34,8 @@ src/
   11_composition_and_mechanism/  composition simulation, proteome, ligand-receptor analysis
   12_figures_and_tables/  combined figures and the supplementary workbook
   13_revision/            Hartung-Knapp pooling, Basal centroid, log-odds summary, Gavish meta-programmes,
-                          BayesPrism deconvolution (optional, needs R)
+                          BayesPrism deconvolution (optional, needs R), single-patient scoring,
+                          xenograft Basal comparison
 run_all.sh, run_all.ps1   run every stage in order
 ```
 
@@ -133,6 +134,8 @@ it.
 | Basal centroid score in GSE65021 and TCGA-HNSC (`results/basal_centroid/`) | `src/13_revision/03_basal_centroid.py` |
 | Saturation and log-odds summaries of pEMT specificity (`results/specificity_saturation/`) | `src/13_revision/04_saturation_logodds.py` |
 | Gavish et al. 2023 meta-programmes and the Tyler and Tirosh availability record (`results/published_programmes/`) | `src/13_revision/05_gavish_meta_programmes.py` |
+| Single-patient scoring of the Basal centroid score and the malignant core in GSE65021 (`results/single_patient/`) | `src/13_revision/08_single_patient_scoring.py` |
+| Basal centroid score against the malignant core in the xenograft panels (`results/pdx_basal/`) | `src/13_revision/09_pdx_basal_centroid.py` |
 | BayesPrism deconvolution of TCGA-HNSC and GSE65021 with GSE181919 as the reference (`results/bayesprism/`) | `src/13_revision/06_bayesprism_deconvolution.R` and `07_bayesprism_analysis.py` |
 
 ## Citation

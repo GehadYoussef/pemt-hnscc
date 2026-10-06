@@ -76,6 +76,8 @@ $steps = @(
     "src/13_revision/03_basal_centroid.py",
     "src/13_revision/04_saturation_logodds.py",
     "src/13_revision/05_gavish_meta_programmes.py",
+    "src/13_revision/08_single_patient_scoring.py",
+    "src/13_revision/09_pdx_basal_centroid.py",
     "src/12_figures_and_tables/01_build_supplementary_tables.py",
     "src/12_figures_and_tables/02_combined_figures.py",
     "src/12_figures_and_tables/03_figure1_study_overview.py",

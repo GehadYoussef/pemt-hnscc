@@ -76,6 +76,8 @@ python src/13_revision/02_core_vs_canonical.py
 python src/13_revision/03_basal_centroid.py
 python src/13_revision/04_saturation_logodds.py
 python src/13_revision/05_gavish_meta_programmes.py
+python src/13_revision/08_single_patient_scoring.py
+python src/13_revision/09_pdx_basal_centroid.py
 python src/12_figures_and_tables/01_build_supplementary_tables.py
 python src/12_figures_and_tables/02_combined_figures.py
 python src/12_figures_and_tables/03_figure1_study_overview.py
