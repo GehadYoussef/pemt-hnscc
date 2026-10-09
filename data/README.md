@@ -13,6 +13,8 @@ Paths are relative to the repository root and match `config/config.yaml`.
 | `schinke2022_egfr_emt_genes.txt` | EGFR-induced EMT signature | Schinke et al., Mol Cancer 2022 |
 | `zhou2025_cetuximab_response_genes.txt`, `zhou2025_invGRN_59genes.txt`, `zhou2025_cetuximab_predictive_9genes.txt` | EGFR invasion genes, invasive gene network and cetuximab predictors | Zhou et al., Mol Cancer 2025 |
 | `ourailidis2026_tumour_budding_28genes.txt` | tumour budding signature | Ourailidis et al., Genome Med 2026 |
+| `sahoo2024_mammary_emt_clusters.xlsx` | mammary EMT signature clusters of Knutsen et al., Front Oncol 2023 (EMT_down, EMT_partial, EMT_up), Table S1 as published | Sahoo et al., iScience 2024 |
+| `simkin2026_spatial_metaprograms.csv` | spatial meta-programmes of HNSCC, file Final_Metaprograms_Extended.csv (https://ndownloader.figshare.com/files/50992821) | Simkin et al., Nat Genet 2026 |
 | `TCGA_HNSC_4class_expression_subtype.csv` | TCGA-HNSC expression subtypes | Cancer Genome Atlas Network, Nature 2015 |
 | `klinghammer2020_table1_cetuximab_RTV.tsv` | cetuximab relative tumour volume per xenograft, transcribed from Table 1 | Klinghammer et al., Oncotarget 2020 |
 | `cptac_hnscc_clinical.tsv` | CPTAC-3 HNSCC clinical data and overall survival, one row per case | GDC clinical release and LinkedOmics |

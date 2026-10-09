@@ -35,7 +35,7 @@ src/
   12_figures_and_tables/  combined figures and the supplementary workbook
   13_revision/            Hartung-Knapp pooling, Basal centroid, log-odds summary, Gavish meta-programmes,
                           BayesPrism deconvolution (optional, needs R), single-patient scoring,
-                          xenograft Basal comparison
+                          xenograft Basal comparison, external partial EMT controls
 run_all.sh, run_all.ps1   run every stage in order
 ```
 
@@ -136,6 +136,7 @@ it.
 | Gavish et al. 2023 meta-programmes and the Tyler and Tirosh availability record (`results/published_programmes/`) | `src/13_revision/05_gavish_meta_programmes.py` |
 | Single-patient scoring of the Basal centroid score and the malignant core in GSE65021 (`results/single_patient/`) | `src/13_revision/08_single_patient_scoring.py` |
 | Basal centroid score against the malignant core in the xenograft panels (`results/pdx_basal/`) | `src/13_revision/09_pdx_basal_centroid.py` |
+| Mammary EMT clusters (Knutsen et al. 2023, via Sahoo et al. 2024) and the spatial partial EMT programme (Simkin et al. 2026) as external controls (`results/external_pemt_controls/`) | `src/13_revision/10_external_pemt_controls.py` |
 | BayesPrism deconvolution of TCGA-HNSC and GSE65021 with GSE181919 as the reference (`results/bayesprism/`) | `src/13_revision/06_bayesprism_deconvolution.R` and `07_bayesprism_analysis.py` |
 
 ## Citation
